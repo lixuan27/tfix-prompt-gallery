@@ -1214,5 +1214,517 @@
     "drift": 22.7
    }
   ]
+ },
+ {
+  "variant": "p5a_replicate_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "replicate this image",
+  "demos": [
+   {
+    "mp4": "media/p5a_replicate_vary_0.mp4",
+    "poster": "media/p5a_replicate_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5a_replicate0",
+    "drift": 38.1
+   },
+   {
+    "mp4": "media/p5a_replicate_vary_1.mp4",
+    "poster": "media/p5a_replicate_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5a_replicate0",
+    "drift": 16.0
+   },
+   {
+    "mp4": "media/p5a_replicate_vary_2.mp4",
+    "poster": "media/p5a_replicate_vary_2.jpg",
+    "clip": "cs_cologne_000057_000000__p5a_replicate0",
+    "drift": 19.3
+   },
+   {
+    "mp4": "media/p5a_replicate_vary_3.mp4",
+    "poster": "media/p5a_replicate_vary_3.jpg",
+    "clip": "cs_tubingen_000021_000000__p5a_replicate0",
+    "drift": 15.0
+   }
+  ]
+ },
+ {
+  "variant": "p5b_remake_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "remake this image",
+  "demos": [
+   {
+    "mp4": "media/p5b_remake_vary_0.mp4",
+    "poster": "media/p5b_remake_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5b_remake0",
+    "drift": 17.7
+   },
+   {
+    "mp4": "media/p5b_remake_vary_1.mp4",
+    "poster": "media/p5b_remake_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5b_remake0",
+    "drift": 32.3
+   },
+   {
+    "mp4": "media/p5b_remake_vary_2.mp4",
+    "poster": "media/p5b_remake_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5b_remake0",
+    "drift": 23.4
+   },
+   {
+    "mp4": "media/p5b_remake_vary_3.mp4",
+    "poster": "media/p5b_remake_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5b_remake0",
+    "drift": 29.1
+   }
+  ]
+ },
+ {
+  "variant": "p5c_paint_again_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "paint this image again",
+  "demos": [
+   {
+    "mp4": "media/p5c_paint_again_vary_0.mp4",
+    "poster": "media/p5c_paint_again_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5c_paint_again0",
+    "drift": 19.4
+   },
+   {
+    "mp4": "media/p5c_paint_again_vary_1.mp4",
+    "poster": "media/p5c_paint_again_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5c_paint_again0",
+    "drift": 29.2
+   },
+   {
+    "mp4": "media/p5c_paint_again_vary_2.mp4",
+    "poster": "media/p5c_paint_again_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5c_paint_again0",
+    "drift": 25.6
+   },
+   {
+    "mp4": "media/p5c_paint_again_vary_3.mp4",
+    "poster": "media/p5c_paint_again_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5c_paint_again0",
+    "drift": 30.7
+   }
+  ]
+ },
+ {
+  "variant": "p5d_generate_same_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "generate the same image",
+  "demos": [
+   {
+    "mp4": "media/p5d_generate_same_vary_0.mp4",
+    "poster": "media/p5d_generate_same_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5d_generate_same0",
+    "drift": 23.8
+   },
+   {
+    "mp4": "media/p5d_generate_same_vary_1.mp4",
+    "poster": "media/p5d_generate_same_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5d_generate_same0",
+    "drift": 36.2
+   },
+   {
+    "mp4": "media/p5d_generate_same_vary_2.mp4",
+    "poster": "media/p5d_generate_same_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5d_generate_same0",
+    "drift": 22.4
+   },
+   {
+    "mp4": "media/p5d_generate_same_vary_3.mp4",
+    "poster": "media/p5d_generate_same_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5d_generate_same0",
+    "drift": 35.3
+   }
+  ]
+ },
+ {
+  "variant": "p5e_depict_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "depict the same scene",
+  "demos": [
+   {
+    "mp4": "media/p5e_depict_vary_0.mp4",
+    "poster": "media/p5e_depict_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5e_depict0",
+    "drift": 17.4
+   },
+   {
+    "mp4": "media/p5e_depict_vary_1.mp4",
+    "poster": "media/p5e_depict_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5e_depict0",
+    "drift": 24.6
+   },
+   {
+    "mp4": "media/p5e_depict_vary_2.mp4",
+    "poster": "media/p5e_depict_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5e_depict0",
+    "drift": 22.0
+   },
+   {
+    "mp4": "media/p5e_depict_vary_3.mp4",
+    "poster": "media/p5e_depict_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5e_depict0",
+    "drift": 29.5
+   }
+  ]
+ },
+ {
+  "variant": "p5f_replicate_scene_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "replicate this scene",
+  "demos": [
+   {
+    "mp4": "media/p5f_replicate_scene_vary_0.mp4",
+    "poster": "media/p5f_replicate_scene_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5f_replicate_scene0",
+    "drift": 22.5
+   },
+   {
+    "mp4": "media/p5f_replicate_scene_vary_1.mp4",
+    "poster": "media/p5f_replicate_scene_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5f_replicate_scene0",
+    "drift": 19.9
+   },
+   {
+    "mp4": "media/p5f_replicate_scene_vary_2.mp4",
+    "poster": "media/p5f_replicate_scene_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5f_replicate_scene0",
+    "drift": 17.5
+   },
+   {
+    "mp4": "media/p5f_replicate_scene_vary_3.mp4",
+    "poster": "media/p5f_replicate_scene_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5f_replicate_scene0",
+    "drift": 25.0
+   }
+  ]
+ },
+ {
+  "variant": "p5g_rerender_street_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "re-render this street scene",
+  "demos": [
+   {
+    "mp4": "media/p5g_rerender_street_vary_0.mp4",
+    "poster": "media/p5g_rerender_street_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5g_rerender_street0",
+    "drift": 51.3
+   },
+   {
+    "mp4": "media/p5g_rerender_street_vary_1.mp4",
+    "poster": "media/p5g_rerender_street_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5g_rerender_street0",
+    "drift": 24.4
+   },
+   {
+    "mp4": "media/p5g_rerender_street_vary_2.mp4",
+    "poster": "media/p5g_rerender_street_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5g_rerender_street0",
+    "drift": 22.5
+   },
+   {
+    "mp4": "media/p5g_rerender_street_vary_3.mp4",
+    "poster": "media/p5g_rerender_street_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5g_rerender_street0",
+    "drift": 29.8
+   }
+  ]
+ },
+ {
+  "variant": "p5h_reproduce_view_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this view",
+  "demos": [
+   {
+    "mp4": "media/p5h_reproduce_view_vary_0.mp4",
+    "poster": "media/p5h_reproduce_view_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5h_reproduce_view0",
+    "drift": 14.7
+   },
+   {
+    "mp4": "media/p5h_reproduce_view_vary_1.mp4",
+    "poster": "media/p5h_reproduce_view_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5h_reproduce_view0",
+    "drift": 21.3
+   },
+   {
+    "mp4": "media/p5h_reproduce_view_vary_2.mp4",
+    "poster": "media/p5h_reproduce_view_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5h_reproduce_view0",
+    "drift": 21.6
+   },
+   {
+    "mp4": "media/p5h_reproduce_view_vary_3.mp4",
+    "poster": "media/p5h_reproduce_view_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5h_reproduce_view0",
+    "drift": 27.2
+   }
+  ]
+ },
+ {
+  "variant": "p5i_repro_faithfully_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this image faithfully",
+  "demos": [
+   {
+    "mp4": "media/p5i_repro_faithfully_vary_0.mp4",
+    "poster": "media/p5i_repro_faithfully_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5i_repro_faithfully0",
+    "drift": 17.5
+   },
+   {
+    "mp4": "media/p5i_repro_faithfully_vary_1.mp4",
+    "poster": "media/p5i_repro_faithfully_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5i_repro_faithfully0",
+    "drift": 26.7
+   },
+   {
+    "mp4": "media/p5i_repro_faithfully_vary_2.mp4",
+    "poster": "media/p5i_repro_faithfully_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5i_repro_faithfully0",
+    "drift": 22.1
+   },
+   {
+    "mp4": "media/p5i_repro_faithfully_vary_3.mp4",
+    "poster": "media/p5i_repro_faithfully_vary_3.jpg",
+    "clip": "8799181_rdne_stock_project__p5i_repro_faithfully0",
+    "drift": 21.9
+   }
+  ]
+ },
+ {
+  "variant": "p5j_repro_loosely_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "loosely reproduce this image",
+  "demos": [
+   {
+    "mp4": "media/p5j_repro_loosely_vary_0.mp4",
+    "poster": "media/p5j_repro_loosely_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5j_repro_loosely0",
+    "drift": 17.5
+   },
+   {
+    "mp4": "media/p5j_repro_loosely_vary_1.mp4",
+    "poster": "media/p5j_repro_loosely_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5j_repro_loosely0",
+    "drift": 24.8
+   },
+   {
+    "mp4": "media/p5j_repro_loosely_vary_2.mp4",
+    "poster": "media/p5j_repro_loosely_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5j_repro_loosely0",
+    "drift": 21.5
+   },
+   {
+    "mp4": "media/p5j_repro_loosely_vary_3.mp4",
+    "poster": "media/p5j_repro_loosely_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5j_repro_loosely0",
+    "drift": 27.7
+   }
+  ]
+ },
+ {
+  "variant": "p5k_repro_roughly_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "roughly reproduce this scene",
+  "demos": [
+   {
+    "mp4": "media/p5k_repro_roughly_vary_0.mp4",
+    "poster": "media/p5k_repro_roughly_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5k_repro_roughly0",
+    "drift": 17.6
+   },
+   {
+    "mp4": "media/p5k_repro_roughly_vary_1.mp4",
+    "poster": "media/p5k_repro_roughly_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5k_repro_roughly0",
+    "drift": 26.2
+   },
+   {
+    "mp4": "media/p5k_repro_roughly_vary_2.mp4",
+    "poster": "media/p5k_repro_roughly_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5k_repro_roughly0",
+    "drift": 22.7
+   },
+   {
+    "mp4": "media/p5k_repro_roughly_vary_3.mp4",
+    "poster": "media/p5k_repro_roughly_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5k_repro_roughly0",
+    "drift": 29.4
+   }
+  ]
+ },
+ {
+  "variant": "p5l_np_same_scene_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "the same scene",
+  "demos": [
+   {
+    "mp4": "media/p5l_np_same_scene_vary_0.mp4",
+    "poster": "media/p5l_np_same_scene_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5l_np_same_scene0",
+    "drift": 17.9
+   },
+   {
+    "mp4": "media/p5l_np_same_scene_vary_1.mp4",
+    "poster": "media/p5l_np_same_scene_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5l_np_same_scene0",
+    "drift": 33.1
+   },
+   {
+    "mp4": "media/p5l_np_same_scene_vary_2.mp4",
+    "poster": "media/p5l_np_same_scene_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5l_np_same_scene0",
+    "drift": 23.1
+   },
+   {
+    "mp4": "media/p5l_np_same_scene_vary_3.mp4",
+    "poster": "media/p5l_np_same_scene_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p5l_np_same_scene0",
+    "drift": 29.6
+   }
+  ]
+ },
+ {
+  "variant": "p5m_np_this_photo_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "this photo",
+  "demos": [
+   {
+    "mp4": "media/p5m_np_this_photo_vary_0.mp4",
+    "poster": "media/p5m_np_this_photo_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5m_np_this_photo0",
+    "drift": 18.1
+   },
+   {
+    "mp4": "media/p5m_np_this_photo_vary_1.mp4",
+    "poster": "media/p5m_np_this_photo_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5m_np_this_photo0",
+    "drift": 41.9
+   },
+   {
+    "mp4": "media/p5m_np_this_photo_vary_2.mp4",
+    "poster": "media/p5m_np_this_photo_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5m_np_this_photo0",
+    "drift": 29.5
+   },
+   {
+    "mp4": "media/p5m_np_this_photo_vary_3.mp4",
+    "poster": "media/p5m_np_this_photo_vary_3.jpg",
+    "clip": "pixabay_valleys_videos_129350_000__p5m_np_this_photo0",
+    "drift": 27.8
+   }
+  ]
+ },
+ {
+  "variant": "p5n_keep_style_repro_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this scene, keeping the same style",
+  "demos": [
+   {
+    "mp4": "media/p5n_keep_style_repro_vary_0.mp4",
+    "poster": "media/p5n_keep_style_repro_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5n_keep_style_repro0",
+    "drift": 17.5
+   },
+   {
+    "mp4": "media/p5n_keep_style_repro_vary_1.mp4",
+    "poster": "media/p5n_keep_style_repro_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5n_keep_style_repro0",
+    "drift": 27.7
+   },
+   {
+    "mp4": "media/p5n_keep_style_repro_vary_2.mp4",
+    "poster": "media/p5n_keep_style_repro_vary_2.jpg",
+    "clip": "8799181_rdne_stock_project__p5n_keep_style_repro0",
+    "drift": 18.1
+   },
+   {
+    "mp4": "media/p5n_keep_style_repro_vary_3.mp4",
+    "poster": "media/p5n_keep_style_repro_vary_3.jpg",
+    "clip": "cs_tubingen_000021_000000__p5n_keep_style_repro0",
+    "drift": 21.6
+   }
+  ]
+ },
+ {
+  "variant": "p5o_small_var_scene_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "a small variation of the same scene, same style",
+  "demos": [
+   {
+    "mp4": "media/p5o_small_var_scene_vary_0.mp4",
+    "poster": "media/p5o_small_var_scene_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5o_small_var_scene0",
+    "drift": 18.1
+   },
+   {
+    "mp4": "media/p5o_small_var_scene_vary_1.mp4",
+    "poster": "media/p5o_small_var_scene_vary_1.jpg",
+    "clip": "8799181_rdne_stock_project__p5o_small_var_scene0",
+    "drift": 18.5
+   },
+   {
+    "mp4": "media/p5o_small_var_scene_vary_2.mp4",
+    "poster": "media/p5o_small_var_scene_vary_2.jpg",
+    "clip": "cs_krefeld_000000_035379__p5o_small_var_scene0",
+    "drift": 46.2
+   },
+   {
+    "mp4": "media/p5o_small_var_scene_vary_3.mp4",
+    "poster": "media/p5o_small_var_scene_vary_3.jpg",
+    "clip": "pixabay_urban_green_spaces_videos_5232_002__p5o_small_var_scene0",
+    "drift": 21.2
+   }
+  ]
+ },
+ {
+  "variant": "p5p_reinterpret_slight_vary",
+  "phase": "P5 \u00b7 continued battery",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "slightly reinterpret this scene, keep the layout",
+  "demos": [
+   {
+    "mp4": "media/p5p_reinterpret_slight_vary_0.mp4",
+    "poster": "media/p5p_reinterpret_slight_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p5p_reinterpret_slight0",
+    "drift": 17.4
+   },
+   {
+    "mp4": "media/p5p_reinterpret_slight_vary_1.mp4",
+    "poster": "media/p5p_reinterpret_slight_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p5p_reinterpret_slight0",
+    "drift": 27.5
+   },
+   {
+    "mp4": "media/p5p_reinterpret_slight_vary_2.mp4",
+    "poster": "media/p5p_reinterpret_slight_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p5p_reinterpret_slight0",
+    "drift": 22.7
+   },
+   {
+    "mp4": "media/p5p_reinterpret_slight_vary_3.mp4",
+    "poster": "media/p5p_reinterpret_slight_vary_3.jpg",
+    "clip": "8799181_rdne_stock_project__p5p_reinterpret_slight0",
+    "drift": 22.3
+   }
+  ]
  }
 ]
