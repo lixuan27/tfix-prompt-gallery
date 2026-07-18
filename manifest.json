@@ -16,6 +16,18 @@
     "poster": "media/pv2_drive_regen_1.jpg",
     "clip": "cs_tubingen_000021_000000__pv2_drive_regen0",
     "drift": 22.9
+   },
+   {
+    "mp4": "media/pv2_drive_regen_2.mp4",
+    "poster": "media/pv2_drive_regen_2.jpg",
+    "clip": "cs_cologne_000057_000000__pv2_drive_regen0",
+    "drift": 29.1
+   },
+   {
+    "mp4": "media/pv2_drive_regen_3.mp4",
+    "poster": "media/pv2_drive_regen_3.jpg",
+    "clip": "cs_strasbourg_000000_014216__pv2_drive_regen0",
+    "drift": 21.0
    }
   ]
  },
@@ -36,6 +48,18 @@
     "poster": "media/pv2_photo_repro_1.jpg",
     "clip": "cs_tubingen_000021_000000__pv2_photo_repro0",
     "drift": 16.1
+   },
+   {
+    "mp4": "media/pv2_photo_repro_2.mp4",
+    "poster": "media/pv2_photo_repro_2.jpg",
+    "clip": "cs_cologne_000057_000000__pv2_photo_repro0",
+    "drift": 22.8
+   },
+   {
+    "mp4": "media/pv2_photo_repro_3.mp4",
+    "poster": "media/pv2_photo_repro_3.jpg",
+    "clip": "cs_strasbourg_000000_014216__pv2_photo_repro0",
+    "drift": 13.8
    }
   ]
  },
@@ -56,6 +80,18 @@
     "poster": "media/pv2_recreate_1.jpg",
     "clip": "cs_tubingen_000021_000000__pv2_recreate0",
     "drift": 23.4
+   },
+   {
+    "mp4": "media/pv2_recreate_2.mp4",
+    "poster": "media/pv2_recreate_2.jpg",
+    "clip": "cs_cologne_000057_000000__pv2_recreate0",
+    "drift": 29.5
+   },
+   {
+    "mp4": "media/pv2_recreate_3.mp4",
+    "poster": "media/pv2_recreate_3.jpg",
+    "clip": "cs_strasbourg_000000_014216__pv2_recreate0",
+    "drift": 20.3
    }
   ]
  },
@@ -76,6 +112,18 @@
     "poster": "media/pv2_street_repro_1.jpg",
     "clip": "cs_tubingen_000021_000000__pv2_street_repro0",
     "drift": 21.4
+   },
+   {
+    "mp4": "media/pv2_street_repro_2.mp4",
+    "poster": "media/pv2_street_repro_2.jpg",
+    "clip": "cs_cologne_000057_000000__pv2_street_repro0",
+    "drift": 26.5
+   },
+   {
+    "mp4": "media/pv2_street_repro_3.mp4",
+    "poster": "media/pv2_street_repro_3.jpg",
+    "clip": "cs_strasbourg_000000_014216__pv2_street_repro0",
+    "drift": 16.9
    }
   ]
  },
@@ -96,6 +144,18 @@
     "poster": "media/pv2_street_rerender_1.jpg",
     "clip": "cs_cologne_000057_000000__pv2_street_rerender0",
     "drift": 23.8
+   },
+   {
+    "mp4": "media/pv2_street_rerender_2.mp4",
+    "poster": "media/pv2_street_rerender_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv2_street_rerender0",
+    "drift": 19.6
+   },
+   {
+    "mp4": "media/pv2_street_rerender_3.mp4",
+    "poster": "media/pv2_street_rerender_3.jpg",
+    "clip": "cs_strasbourg_000000_014216__pv2_street_rerender0",
+    "drift": 15.8
    }
   ]
  },
@@ -116,6 +176,18 @@
     "poster": "media/pv_empty_1.jpg",
     "clip": "cs_tubingen_000021_000000__pv_empty0",
     "drift": 27.7
+   },
+   {
+    "mp4": "media/pv_empty_2.mp4",
+    "poster": "media/pv_empty_2.jpg",
+    "clip": "cs_strasbourg_000000_014216__pv_empty0",
+    "drift": 21.1
+   },
+   {
+    "mp4": "media/pv_empty_3.mp4",
+    "poster": "media/pv_empty_3.jpg",
+    "clip": "pixabay_valleys_videos_129350_000__pv_empty0",
+    "drift": 28.6
    }
   ]
  },
@@ -136,6 +208,18 @@
     "poster": "media/pv_photo_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_photo0",
     "drift": 28.4
+   },
+   {
+    "mp4": "media/pv_photo_2.mp4",
+    "poster": "media/pv_photo_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_photo0",
+    "drift": 20.9
+   },
+   {
+    "mp4": "media/pv_photo_3.mp4",
+    "poster": "media/pv_photo_3.jpg",
+    "clip": "cs_cologne_000057_000000__pv_photo0",
+    "drift": 27.0
    }
   ]
  },
@@ -156,6 +240,18 @@
     "poster": "media/pv_recon_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_recon0",
     "drift": 28.0
+   },
+   {
+    "mp4": "media/pv_recon_2.mp4",
+    "poster": "media/pv_recon_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_recon0",
+    "drift": 21.3
+   },
+   {
+    "mp4": "media/pv_recon_3.mp4",
+    "poster": "media/pv_recon_3.jpg",
+    "clip": "8799181_rdne_stock_project__pv_recon0",
+    "drift": 19.8
    }
   ]
  },
@@ -176,6 +272,18 @@
     "poster": "media/pv_redraw_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_redraw0",
     "drift": 30.2
+   },
+   {
+    "mp4": "media/pv_redraw_2.mp4",
+    "poster": "media/pv_redraw_2.jpg",
+    "clip": "cs_cologne_000057_000000__pv_redraw0",
+    "drift": 30.1
+   },
+   {
+    "mp4": "media/pv_redraw_3.mp4",
+    "poster": "media/pv_redraw_3.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_redraw0",
+    "drift": 25.4
    }
   ]
  },
@@ -196,6 +304,18 @@
     "poster": "media/pv_regen_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_regen0",
     "drift": 28.6
+   },
+   {
+    "mp4": "media/pv_regen_2.mp4",
+    "poster": "media/pv_regen_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_regen0",
+    "drift": 23.7
+   },
+   {
+    "mp4": "media/pv_regen_3.mp4",
+    "poster": "media/pv_regen_3.jpg",
+    "clip": "cs_cologne_000057_000000__pv_regen0",
+    "drift": 29.6
    }
   ]
  },
@@ -216,6 +336,18 @@
     "poster": "media/pv_repaint_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_repaint0",
     "drift": 28.5
+   },
+   {
+    "mp4": "media/pv_repaint_2.mp4",
+    "poster": "media/pv_repaint_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_repaint0",
+    "drift": 22.7
+   },
+   {
+    "mp4": "media/pv_repaint_3.mp4",
+    "poster": "media/pv_repaint_3.jpg",
+    "clip": "cs_cologne_000057_000000__pv_repaint0",
+    "drift": 29.1
    }
   ]
  },
@@ -236,6 +368,18 @@
     "poster": "media/pv_repro_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_repro0",
     "drift": 19.3
+   },
+   {
+    "mp4": "media/pv_repro_2.mp4",
+    "poster": "media/pv_repro_2.jpg",
+    "clip": "8799181_rdne_stock_project__pv_repro0",
+    "drift": 13.7
+   },
+   {
+    "mp4": "media/pv_repro_3.mp4",
+    "poster": "media/pv_repro_3.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_repro0",
+    "drift": 17.0
    }
   ]
  },
@@ -256,6 +400,18 @@
     "poster": "media/pv_rerender_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_rerender0",
     "drift": 28.3
+   },
+   {
+    "mp4": "media/pv_rerender_2.mp4",
+    "poster": "media/pv_rerender_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_rerender0",
+    "drift": 23.0
+   },
+   {
+    "mp4": "media/pv_rerender_3.mp4",
+    "poster": "media/pv_rerender_3.jpg",
+    "clip": "8799181_rdne_stock_project__pv_rerender0",
+    "drift": 21.8
    }
   ]
  },
@@ -276,6 +432,18 @@
     "poster": "media/pv_same_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_same0",
     "drift": 32.1
+   },
+   {
+    "mp4": "media/pv_same_2.mp4",
+    "poster": "media/pv_same_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_same0",
+    "drift": 23.6
+   },
+   {
+    "mp4": "media/pv_same_3.mp4",
+    "poster": "media/pv_same_3.jpg",
+    "clip": "cs_cologne_000057_000000__pv_same0",
+    "drift": 29.6
    }
   ]
  },
@@ -296,6 +464,18 @@
     "poster": "media/pm_little_fix_1.jpg",
     "clip": "cs_krefeld_000000_035379__pm_little0",
     "drift": 28.6
+   },
+   {
+    "mp4": "media/pm_little_fix_2.mp4",
+    "poster": "media/pm_little_fix_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pm_little0",
+    "drift": 23.7
+   },
+   {
+    "mp4": "media/pm_little_fix_3.mp4",
+    "poster": "media/pm_little_fix_3.jpg",
+    "clip": "cs_cologne_000057_000000__pm_little0",
+    "drift": 29.7
    }
   ]
  },
@@ -316,6 +496,18 @@
     "poster": "media/pm_little_recon_fix_1.jpg",
     "clip": "cs_krefeld_000000_035379__pm_little_recon0",
     "drift": 28.5
+   },
+   {
+    "mp4": "media/pm_little_recon_fix_2.mp4",
+    "poster": "media/pm_little_recon_fix_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pm_little_recon0",
+    "drift": 23.3
+   },
+   {
+    "mp4": "media/pm_little_recon_fix_3.mp4",
+    "poster": "media/pm_little_recon_fix_3.jpg",
+    "clip": "8799181_rdne_stock_project__pm_little_recon0",
+    "drift": 21.7
    }
   ]
  },
@@ -336,6 +528,18 @@
     "poster": "media/pm_little_recon_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__pm_little_recon0",
     "drift": 28.6
+   },
+   {
+    "mp4": "media/pm_little_recon_vary_2.mp4",
+    "poster": "media/pm_little_recon_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pm_little_recon0",
+    "drift": 23.0
+   },
+   {
+    "mp4": "media/pm_little_recon_vary_3.mp4",
+    "poster": "media/pm_little_recon_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__pm_little_recon0",
+    "drift": 29.6
    }
   ]
  },
@@ -356,6 +560,18 @@
     "poster": "media/pm_little_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__pm_little0",
     "drift": 28.8
+   },
+   {
+    "mp4": "media/pm_little_vary_2.mp4",
+    "poster": "media/pm_little_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pm_little0",
+    "drift": 23.5
+   },
+   {
+    "mp4": "media/pm_little_vary_3.mp4",
+    "poster": "media/pm_little_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__pm_little0",
+    "drift": 29.9
    }
   ]
  },
@@ -376,6 +592,18 @@
     "poster": "media/pm_slight_redraw_fix_1.jpg",
     "clip": "cs_krefeld_000000_035379__pm_slight_redraw0",
     "drift": 28.5
+   },
+   {
+    "mp4": "media/pm_slight_redraw_fix_2.mp4",
+    "poster": "media/pm_slight_redraw_fix_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pm_slight_redraw0",
+    "drift": 23.1
+   },
+   {
+    "mp4": "media/pm_slight_redraw_fix_3.mp4",
+    "poster": "media/pm_slight_redraw_fix_3.jpg",
+    "clip": "cs_cologne_000057_000000__pm_slight_redraw0",
+    "drift": 29.4
    }
   ]
  },
@@ -396,6 +624,18 @@
     "poster": "media/pm_slight_redraw_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__pm_slight_redraw0",
     "drift": 28.1
+   },
+   {
+    "mp4": "media/pm_slight_redraw_vary_2.mp4",
+    "poster": "media/pm_slight_redraw_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pm_slight_redraw0",
+    "drift": 22.5
+   },
+   {
+    "mp4": "media/pm_slight_redraw_vary_3.mp4",
+    "poster": "media/pm_slight_redraw_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__pm_slight_redraw0",
+    "drift": 29.6
    }
   ]
  },
@@ -416,6 +656,18 @@
     "poster": "media/pv2_street_repro_fix_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv2_street_repro0",
     "drift": 20.4
+   },
+   {
+    "mp4": "media/pv2_street_repro_fix_2.mp4",
+    "poster": "media/pv2_street_repro_fix_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv2_street_repro0",
+    "drift": 20.8
+   },
+   {
+    "mp4": "media/pv2_street_repro_fix_3.mp4",
+    "poster": "media/pv2_street_repro_fix_3.jpg",
+    "clip": "cs_cologne_000057_000000__pv2_street_repro0",
+    "drift": 25.8
    }
   ]
  },
@@ -436,6 +688,18 @@
     "poster": "media/pv2_street_repro_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv2_street_repro0",
     "drift": 23.4
+   },
+   {
+    "mp4": "media/pv2_street_repro_vary_2.mp4",
+    "poster": "media/pv2_street_repro_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv2_street_repro0",
+    "drift": 23.1
+   },
+   {
+    "mp4": "media/pv2_street_repro_vary_3.mp4",
+    "poster": "media/pv2_street_repro_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__pv2_street_repro0",
+    "drift": 30.9
    }
   ]
  },
@@ -456,6 +720,18 @@
     "poster": "media/pv_repro_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__pv_repro0",
     "drift": 18.0
+   },
+   {
+    "mp4": "media/pv_repro_vary_2.mp4",
+    "poster": "media/pv_repro_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__pv_repro0",
+    "drift": 15.8
+   },
+   {
+    "mp4": "media/pv_repro_vary_3.mp4",
+    "poster": "media/pv_repro_vary_3.jpg",
+    "clip": "8799181_rdne_stock_project__pv_repro0",
+    "drift": 14.0
    }
   ]
  },
@@ -476,6 +752,18 @@
     "poster": "media/p4a_small_random_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4a_small_random0",
     "drift": 28.7
+   },
+   {
+    "mp4": "media/p4a_small_random_vary_2.mp4",
+    "poster": "media/p4a_small_random_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4a_small_random0",
+    "drift": 23.4
+   },
+   {
+    "mp4": "media/p4a_small_random_vary_3.mp4",
+    "poster": "media/p4a_small_random_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4a_small_random0",
+    "drift": 29.7
    }
   ]
  },
@@ -496,6 +784,18 @@
     "poster": "media/p4b_minor_var_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4b_minor_var0",
     "drift": 28.1
+   },
+   {
+    "mp4": "media/p4b_minor_var_vary_2.mp4",
+    "poster": "media/p4b_minor_var_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4b_minor_var0",
+    "drift": 22.6
+   },
+   {
+    "mp4": "media/p4b_minor_var_vary_3.mp4",
+    "poster": "media/p4b_minor_var_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4b_minor_var0",
+    "drift": 29.4
    }
   ]
  },
@@ -516,6 +816,18 @@
     "poster": "media/p4c_fine_details_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4c_fine_details0",
     "drift": 28.8
+   },
+   {
+    "mp4": "media/p4c_fine_details_vary_2.mp4",
+    "poster": "media/p4c_fine_details_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4c_fine_details0",
+    "drift": 23.6
+   },
+   {
+    "mp4": "media/p4c_fine_details_vary_3.mp4",
+    "poster": "media/p4c_fine_details_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4c_fine_details0",
+    "drift": 29.8
    }
   ]
  },
@@ -536,6 +848,18 @@
     "poster": "media/p4d_rendition_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4d_rendition0",
     "drift": 24.3
+   },
+   {
+    "mp4": "media/p4d_rendition_vary_2.mp4",
+    "poster": "media/p4d_rendition_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4d_rendition0",
+    "drift": 18.9
+   },
+   {
+    "mp4": "media/p4d_rendition_vary_3.mp4",
+    "poster": "media/p4d_rendition_vary_3.jpg",
+    "clip": "8799181_rdne_stock_project__p4d_rendition0",
+    "drift": 19.2
    }
   ]
  },
@@ -556,6 +880,18 @@
     "poster": "media/p4e_repaint_bare_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4e_repaint_bare0",
     "drift": 29.1
+   },
+   {
+    "mp4": "media/p4e_repaint_bare_vary_2.mp4",
+    "poster": "media/p4e_repaint_bare_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4e_repaint_bare0",
+    "drift": 23.4
+   },
+   {
+    "mp4": "media/p4e_repaint_bare_vary_3.mp4",
+    "poster": "media/p4e_repaint_bare_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4e_repaint_bare0",
+    "drift": 30.0
    }
   ]
  },
@@ -576,6 +912,18 @@
     "poster": "media/p4f_redo_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4f_redo0",
     "drift": 31.5
+   },
+   {
+    "mp4": "media/p4f_redo_vary_2.mp4",
+    "poster": "media/p4f_redo_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4f_redo0",
+    "drift": 23.3
+   },
+   {
+    "mp4": "media/p4f_redo_vary_3.mp4",
+    "poster": "media/p4f_redo_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4f_redo0",
+    "drift": 30.2
    }
   ]
  },
@@ -596,6 +944,18 @@
     "poster": "media/p4g_render_again_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4g_render_again0",
     "drift": 32.7
+   },
+   {
+    "mp4": "media/p4g_render_again_vary_2.mp4",
+    "poster": "media/p4g_render_again_vary_2.jpg",
+    "clip": "cs_cologne_000057_000000__p4g_render_again0",
+    "drift": 29.5
+   },
+   {
+    "mp4": "media/p4g_render_again_vary_3.mp4",
+    "poster": "media/p4g_render_again_vary_3.jpg",
+    "clip": "8799181_rdne_stock_project__p4g_render_again0",
+    "drift": 23.1
    }
   ]
  },
@@ -616,6 +976,18 @@
     "poster": "media/p4h_draw_vary_1.jpg",
     "clip": "8799181_rdne_stock_project__p4h_draw0",
     "drift": 26.7
+   },
+   {
+    "mp4": "media/p4h_draw_vary_2.mp4",
+    "poster": "media/p4h_draw_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4h_draw0",
+    "drift": 29.0
+   },
+   {
+    "mp4": "media/p4h_draw_vary_3.mp4",
+    "poster": "media/p4h_draw_vary_3.jpg",
+    "clip": "pixabay_valleys_videos_129350_000__p4h_draw0",
+    "drift": 28.6
    }
   ]
  },
@@ -636,6 +1008,18 @@
     "poster": "media/p4i_reimagine_slight_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4i_reimagine_slight0",
     "drift": 28.5
+   },
+   {
+    "mp4": "media/p4i_reimagine_slight_vary_2.mp4",
+    "poster": "media/p4i_reimagine_slight_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4i_reimagine_slight0",
+    "drift": 23.1
+   },
+   {
+    "mp4": "media/p4i_reimagine_slight_vary_3.mp4",
+    "poster": "media/p4i_reimagine_slight_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4i_reimagine_slight0",
+    "drift": 29.6
    }
   ]
  },
@@ -656,6 +1040,18 @@
     "poster": "media/p4j_copy_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4j_copy0",
     "drift": 28.7
+   },
+   {
+    "mp4": "media/p4j_copy_vary_2.mp4",
+    "poster": "media/p4j_copy_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4j_copy0",
+    "drift": 19.8
+   },
+   {
+    "mp4": "media/p4j_copy_vary_3.mp4",
+    "poster": "media/p4j_copy_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4j_copy0",
+    "drift": 25.6
    }
   ]
  },
@@ -676,6 +1072,18 @@
     "poster": "media/p4k_scene_repro_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4k_scene_repro0",
     "drift": 22.1
+   },
+   {
+    "mp4": "media/p4k_scene_repro_vary_2.mp4",
+    "poster": "media/p4k_scene_repro_vary_2.jpg",
+    "clip": "8799181_rdne_stock_project__p4k_scene_repro0",
+    "drift": 17.5
+   },
+   {
+    "mp4": "media/p4k_scene_repro_vary_3.mp4",
+    "poster": "media/p4k_scene_repro_vary_3.jpg",
+    "clip": "cs_tubingen_000021_000000__p4k_scene_repro0",
+    "drift": 20.9
    }
   ]
  },
@@ -696,6 +1104,18 @@
     "poster": "media/p4l_exact_control_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4l_exact_control0",
     "drift": 18.3
+   },
+   {
+    "mp4": "media/p4l_exact_control_vary_2.mp4",
+    "poster": "media/p4l_exact_control_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4l_exact_control0",
+    "drift": 17.3
+   },
+   {
+    "mp4": "media/p4l_exact_control_vary_3.mp4",
+    "poster": "media/p4l_exact_control_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4l_exact_control0",
+    "drift": 23.4
    }
   ]
  },
@@ -716,6 +1136,18 @@
     "poster": "media/p4m_every_detail_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4m_every_detail0",
     "drift": 28.1
+   },
+   {
+    "mp4": "media/p4m_every_detail_vary_2.mp4",
+    "poster": "media/p4m_every_detail_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4m_every_detail0",
+    "drift": 20.6
+   },
+   {
+    "mp4": "media/p4m_every_detail_vary_3.mp4",
+    "poster": "media/p4m_every_detail_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p4m_every_detail0",
+    "drift": 28.4
    }
   ]
  },
@@ -736,6 +1168,18 @@
     "poster": "media/p4n_repro_little_style_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4n_repro_little_style0",
     "drift": 26.3
+   },
+   {
+    "mp4": "media/p4n_repro_little_style_vary_2.mp4",
+    "poster": "media/p4n_repro_little_style_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p4n_repro_little_style0",
+    "drift": 21.5
+   },
+   {
+    "mp4": "media/p4n_repro_little_style_vary_3.mp4",
+    "poster": "media/p4n_repro_little_style_vary_3.jpg",
+    "clip": "8799181_rdne_stock_project__p4n_repro_little_style0",
+    "drift": 21.0
    }
   ]
  },
@@ -756,6 +1200,18 @@
     "poster": "media/p4o_rerender_small_var_vary_1.jpg",
     "clip": "cs_krefeld_000000_035379__p4o_rerender_small_var0",
     "drift": 27.4
+   },
+   {
+    "mp4": "media/p4o_rerender_small_var_vary_2.mp4",
+    "poster": "media/p4o_rerender_small_var_vary_2.jpg",
+    "clip": "8799181_rdne_stock_project__p4o_rerender_small_var0",
+    "drift": 18.8
+   },
+   {
+    "mp4": "media/p4o_rerender_small_var_vary_3.mp4",
+    "poster": "media/p4o_rerender_small_var_vary_3.jpg",
+    "clip": "cs_tubingen_000021_000000__p4o_rerender_small_var0",
+    "drift": 22.7
    }
   ]
  }
