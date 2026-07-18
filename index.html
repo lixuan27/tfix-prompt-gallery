@@ -34,7 +34,7 @@ Editor = <code>Qwen-Image-Edit-2509 int4 + Lightning-v2 (nunchaku)</code>, 4-ste
 denoising from Gaussian noise per frame — never tuned. The fixer (a separate causal
 video model) is trained only to undo the temporal inconsistency you see on the right;
 at test the only thing that changes is the editor's prompt (reconstruction &rarr; edit).
-<b>216</b> reconstruction clips across <b>54</b> prompt variants.</p>
+<b>256</b> reconstruction clips across <b>64</b> prompt variants.</p>
 <p class="sub">Metrics per variant: <b>Δstr</b> = injected frame-to-frame structural
 inconsistency; <b>driving Δstr</b> = same on driving footage; <b>frame-corr</b> =
 across-frame consistency of the injected change (lower = more per-frame
@@ -328,8 +328,61 @@ per-frame int4 edit draft, the fixer output.</p>
 </div>
 <div class="card">
   <div class="prompt">&ldquo;slightly reinterpret this scene, keep the layout&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 2.65</span><span class="chip">driving Δstr 0.49</span><span class="chip corr">frame-corr 0.824</span></div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 2.86</span><span class="chip">driving Δstr 0.49</span><span class="chip corr">frame-corr 0.815</span></div>
   <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_0.jpg"><source src="media/p5p_reinterpret_slight_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_1.jpg"><source src="media/p5p_reinterpret_slight_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_2.jpg"><source src="media/p5p_reinterpret_slight_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_3.jpg"><source src="media/p5p_reinterpret_slight_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+</div>
+<h2 class="phase">P6 · color-preserving (fixes dark / soft reconstruction)</h2>
+<div class="grid">
+<div class="card">
+  <div class="prompt">&ldquo;reproduce this image, keeping the exact same colors and brightness&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 2.20</span><span class="chip">driving Δstr 1.05</span><span class="chip corr">frame-corr 0.893</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_0.jpg"><source src="media/p6a_repro_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_1.jpg"><source src="media/p6a_repro_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_2.jpg"><source src="media/p6a_repro_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_3.jpg"><source src="media/p6a_repro_color_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;reproduce this image, sharp and clear, in the same lighting&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 1.70</span><span class="chip">driving Δstr -0.19</span><span class="chip corr">frame-corr 0.911</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_0.jpg"><source src="media/p6b_sharp_light_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_1.jpg"><source src="media/p6b_sharp_light_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_2.jpg"><source src="media/p6b_sharp_light_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_3.jpg"><source src="media/p6b_sharp_light_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;a photorealistic reproduction of this scene, same colors and exposure&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 2.73</span><span class="chip">driving Δstr 1.16</span><span class="chip corr">frame-corr 0.839</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_0.jpg"><source src="media/p6c_photoreal_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_1.jpg"><source src="media/p6c_photoreal_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_2.jpg"><source src="media/p6c_photoreal_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_3.jpg"><source src="media/p6c_photoreal_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;reproduce this image faithfully in high quality, preserve the colors and detail&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 2.60</span><span class="chip">driving Δstr 1.00</span><span class="chip corr">frame-corr 0.843</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_0.jpg"><source src="media/p6d_hq_detail_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_1.jpg"><source src="media/p6d_hq_detail_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_2.jpg"><source src="media/p6d_hq_detail_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_3.jpg"><source src="media/p6d_hq_detail_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;reproduce this view, keep the original colors, brightness and sharpness&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 4.43</span><span class="chip">driving Δstr 3.58</span><span class="chip corr">frame-corr 0.674</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_0.jpg"><source src="media/p6e_view_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_1.jpg"><source src="media/p6e_view_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_2.jpg"><source src="media/p6e_view_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_3.jpg"><source src="media/p6e_view_color_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;reproduce this image, bright and detailed, true to the original colors&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 4.05</span><span class="chip">driving Δstr 3.86</span><span class="chip corr">frame-corr 0.855</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_0.jpg"><source src="media/p6f_true_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_1.jpg"><source src="media/p6f_true_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_2.jpg"><source src="media/p6f_true_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_3.jpg"><source src="media/p6f_true_color_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;reproduce this image, do not change the colors or brightness&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 1.93</span><span class="chip">driving Δstr 0.77</span><span class="chip corr">frame-corr 0.912</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_0.jpg"><source src="media/p6g_no_recolor_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_1.jpg"><source src="media/p6g_no_recolor_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_2.jpg"><source src="media/p6g_no_recolor_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_3.jpg"><source src="media/p6g_no_recolor_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;a crisp, well-exposed reproduction of the same scene&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 2.22</span><span class="chip">driving Δstr 0.67</span><span class="chip corr">frame-corr 0.901</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_0.jpg"><source src="media/p6h_crisp_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_1.jpg"><source src="media/p6h_crisp_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_2.jpg"><source src="media/p6h_crisp_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_3.jpg"><source src="media/p6h_crisp_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;restore this scene to a sharp, clear, true-color version&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 1.19</span><span class="chip">driving Δstr -0.29</span><span class="chip corr">frame-corr 0.928</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_0.jpg"><source src="media/p6i_restore_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_1.jpg"><source src="media/p6i_restore_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_2.jpg"><source src="media/p6i_restore_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_3.jpg"><source src="media/p6i_restore_vary_3.mp4" type="video/mp4"></video></div>
+</div>
+<div class="card">
+  <div class="prompt">&ldquo;replicate this scene in the same colors, lighting and sharpness&rdquo;</div>
+  <div class="meta"><span class="seed">vary (fresh noise / frame)</span><span class="chip">Δstr 2.83</span><span class="chip">driving Δstr 1.26</span><span class="chip corr">frame-corr 0.769</span></div>
+  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_0.jpg"><source src="media/p6j_replicate_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_1.jpg"><source src="media/p6j_replicate_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_2.jpg"><source src="media/p6j_replicate_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_3.jpg"><source src="media/p6j_replicate_color_vary_3.mp4" type="video/mp4"></video></div>
 </div>
 </div>
 </main>

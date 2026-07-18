@@ -1726,5 +1726,325 @@
     "drift": 22.3
    }
   ]
+ },
+ {
+  "variant": "p6a_repro_color_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this image, keeping the exact same colors and brightness",
+  "demos": [
+   {
+    "mp4": "media/p6a_repro_color_vary_0.mp4",
+    "poster": "media/p6a_repro_color_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6a_repro_color0",
+    "drift": 17.7
+   },
+   {
+    "mp4": "media/p6a_repro_color_vary_1.mp4",
+    "poster": "media/p6a_repro_color_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6a_repro_color0",
+    "drift": 29.2
+   },
+   {
+    "mp4": "media/p6a_repro_color_vary_2.mp4",
+    "poster": "media/p6a_repro_color_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6a_repro_color0",
+    "drift": 24.5
+   },
+   {
+    "mp4": "media/p6a_repro_color_vary_3.mp4",
+    "poster": "media/p6a_repro_color_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6a_repro_color0",
+    "drift": 30.3
+   }
+  ]
+ },
+ {
+  "variant": "p6b_sharp_light_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this image, sharp and clear, in the same lighting",
+  "demos": [
+   {
+    "mp4": "media/p6b_sharp_light_vary_0.mp4",
+    "poster": "media/p6b_sharp_light_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6b_sharp_light0",
+    "drift": 17.4
+   },
+   {
+    "mp4": "media/p6b_sharp_light_vary_1.mp4",
+    "poster": "media/p6b_sharp_light_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6b_sharp_light0",
+    "drift": 28.7
+   },
+   {
+    "mp4": "media/p6b_sharp_light_vary_2.mp4",
+    "poster": "media/p6b_sharp_light_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6b_sharp_light0",
+    "drift": 23.7
+   },
+   {
+    "mp4": "media/p6b_sharp_light_vary_3.mp4",
+    "poster": "media/p6b_sharp_light_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6b_sharp_light0",
+    "drift": 29.8
+   }
+  ]
+ },
+ {
+  "variant": "p6c_photoreal_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "a photorealistic reproduction of this scene, same colors and exposure",
+  "demos": [
+   {
+    "mp4": "media/p6c_photoreal_vary_0.mp4",
+    "poster": "media/p6c_photoreal_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6c_photoreal0",
+    "drift": 17.6
+   },
+   {
+    "mp4": "media/p6c_photoreal_vary_1.mp4",
+    "poster": "media/p6c_photoreal_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6c_photoreal0",
+    "drift": 27.6
+   },
+   {
+    "mp4": "media/p6c_photoreal_vary_2.mp4",
+    "poster": "media/p6c_photoreal_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6c_photoreal0",
+    "drift": 22.9
+   },
+   {
+    "mp4": "media/p6c_photoreal_vary_3.mp4",
+    "poster": "media/p6c_photoreal_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6c_photoreal0",
+    "drift": 29.6
+   }
+  ]
+ },
+ {
+  "variant": "p6d_hq_detail_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this image faithfully in high quality, preserve the colors and detail",
+  "demos": [
+   {
+    "mp4": "media/p6d_hq_detail_vary_0.mp4",
+    "poster": "media/p6d_hq_detail_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6d_hq_detail0",
+    "drift": 17.4
+   },
+   {
+    "mp4": "media/p6d_hq_detail_vary_1.mp4",
+    "poster": "media/p6d_hq_detail_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6d_hq_detail0",
+    "drift": 28.6
+   },
+   {
+    "mp4": "media/p6d_hq_detail_vary_2.mp4",
+    "poster": "media/p6d_hq_detail_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6d_hq_detail0",
+    "drift": 23.2
+   },
+   {
+    "mp4": "media/p6d_hq_detail_vary_3.mp4",
+    "poster": "media/p6d_hq_detail_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6d_hq_detail0",
+    "drift": 29.7
+   }
+  ]
+ },
+ {
+  "variant": "p6e_view_color_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this view, keep the original colors, brightness and sharpness",
+  "demos": [
+   {
+    "mp4": "media/p6e_view_color_vary_0.mp4",
+    "poster": "media/p6e_view_color_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6e_view_color0",
+    "drift": 17.2
+   },
+   {
+    "mp4": "media/p6e_view_color_vary_1.mp4",
+    "poster": "media/p6e_view_color_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6e_view_color0",
+    "drift": 23.3
+   },
+   {
+    "mp4": "media/p6e_view_color_vary_2.mp4",
+    "poster": "media/p6e_view_color_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6e_view_color0",
+    "drift": 23.3
+   },
+   {
+    "mp4": "media/p6e_view_color_vary_3.mp4",
+    "poster": "media/p6e_view_color_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6e_view_color0",
+    "drift": 28.4
+   }
+  ]
+ },
+ {
+  "variant": "p6f_true_color_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this image, bright and detailed, true to the original colors",
+  "demos": [
+   {
+    "mp4": "media/p6f_true_color_vary_0.mp4",
+    "poster": "media/p6f_true_color_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6f_true_color0",
+    "drift": 19.2
+   },
+   {
+    "mp4": "media/p6f_true_color_vary_1.mp4",
+    "poster": "media/p6f_true_color_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6f_true_color0",
+    "drift": 40.7
+   },
+   {
+    "mp4": "media/p6f_true_color_vary_2.mp4",
+    "poster": "media/p6f_true_color_vary_2.jpg",
+    "clip": "cs_cologne_000057_000000__p6f_true_color0",
+    "drift": 34.2
+   },
+   {
+    "mp4": "media/p6f_true_color_vary_3.mp4",
+    "poster": "media/p6f_true_color_vary_3.jpg",
+    "clip": "cs_strasbourg_000000_014216__p6f_true_color0",
+    "drift": 22.4
+   }
+  ]
+ },
+ {
+  "variant": "p6g_no_recolor_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "reproduce this image, do not change the colors or brightness",
+  "demos": [
+   {
+    "mp4": "media/p6g_no_recolor_vary_0.mp4",
+    "poster": "media/p6g_no_recolor_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6g_no_recolor0",
+    "drift": 17.8
+   },
+   {
+    "mp4": "media/p6g_no_recolor_vary_1.mp4",
+    "poster": "media/p6g_no_recolor_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6g_no_recolor0",
+    "drift": 29.5
+   },
+   {
+    "mp4": "media/p6g_no_recolor_vary_2.mp4",
+    "poster": "media/p6g_no_recolor_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6g_no_recolor0",
+    "drift": 24.7
+   },
+   {
+    "mp4": "media/p6g_no_recolor_vary_3.mp4",
+    "poster": "media/p6g_no_recolor_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6g_no_recolor0",
+    "drift": 30.2
+   }
+  ]
+ },
+ {
+  "variant": "p6h_crisp_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "a crisp, well-exposed reproduction of the same scene",
+  "demos": [
+   {
+    "mp4": "media/p6h_crisp_vary_0.mp4",
+    "poster": "media/p6h_crisp_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6h_crisp0",
+    "drift": 17.4
+   },
+   {
+    "mp4": "media/p6h_crisp_vary_1.mp4",
+    "poster": "media/p6h_crisp_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6h_crisp0",
+    "drift": 29.8
+   },
+   {
+    "mp4": "media/p6h_crisp_vary_2.mp4",
+    "poster": "media/p6h_crisp_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6h_crisp0",
+    "drift": 24.4
+   },
+   {
+    "mp4": "media/p6h_crisp_vary_3.mp4",
+    "poster": "media/p6h_crisp_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6h_crisp0",
+    "drift": 30.6
+   }
+  ]
+ },
+ {
+  "variant": "p6i_restore_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "restore this scene to a sharp, clear, true-color version",
+  "demos": [
+   {
+    "mp4": "media/p6i_restore_vary_0.mp4",
+    "poster": "media/p6i_restore_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6i_restore0",
+    "drift": 20.0
+   },
+   {
+    "mp4": "media/p6i_restore_vary_1.mp4",
+    "poster": "media/p6i_restore_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6i_restore0",
+    "drift": 28.8
+   },
+   {
+    "mp4": "media/p6i_restore_vary_2.mp4",
+    "poster": "media/p6i_restore_vary_2.jpg",
+    "clip": "cs_tubingen_000021_000000__p6i_restore0",
+    "drift": 23.4
+   },
+   {
+    "mp4": "media/p6i_restore_vary_3.mp4",
+    "poster": "media/p6i_restore_vary_3.jpg",
+    "clip": "cs_cologne_000057_000000__p6i_restore0",
+    "drift": 29.8
+   }
+  ]
+ },
+ {
+  "variant": "p6j_replicate_color_vary",
+  "phase": "P6 \u00b7 color-preserving (fixes dark / soft reconstruction)",
+  "seed": "vary (fresh noise / frame)",
+  "prompt": "replicate this scene in the same colors, lighting and sharpness",
+  "demos": [
+   {
+    "mp4": "media/p6j_replicate_color_vary_0.mp4",
+    "poster": "media/p6j_replicate_color_vary_0.jpg",
+    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__p6j_replicate_color0",
+    "drift": 17.5
+   },
+   {
+    "mp4": "media/p6j_replicate_color_vary_1.mp4",
+    "poster": "media/p6j_replicate_color_vary_1.jpg",
+    "clip": "cs_krefeld_000000_035379__p6j_replicate_color0",
+    "drift": 25.8
+   },
+   {
+    "mp4": "media/p6j_replicate_color_vary_2.mp4",
+    "poster": "media/p6j_replicate_color_vary_2.jpg",
+    "clip": "8799181_rdne_stock_project__p6j_replicate_color0",
+    "drift": 17.9
+   },
+   {
+    "mp4": "media/p6j_replicate_color_vary_3.mp4",
+    "poster": "media/p6j_replicate_color_vary_3.jpg",
+    "clip": "cs_tubingen_000021_000000__p6j_replicate_color0",
+    "drift": 21.8
+   }
+  ]
  }
 ]
