@@ -1,625 +1,109 @@
 [
  {
-  "recipe": "true_color__vary",
-  "prompt": "reproduce, bright/detailed, true colors",
-  "seed": "vary",
-  "flash": 0.0,
-  "incon": 13.8,
-  "bflick": 4.15,
+  "title": "Same-frame editing \u2192 fixer (real per-frame driving edits)",
+  "input_label": "INPUT: per-frame EDIT",
   "demos": [
    {
-    "mp4": "media/true_color__vary_0.mp4",
-    "poster": "media/true_color__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 10.0,
-    "flash": 0.0
+    "mp4": "media/driving_ext_v6fix_0.mp4",
+    "poster": "media/driving_ext_v6fix_0.jpg",
+    "clip": "cs_frankfurt_000001_004717__drive_edit0",
+    "dSrc": 7.6,
+    "dInput": 12.5,
+    "dFixed": 7.8
    },
    {
-    "mp4": "media/true_color__vary_1.mp4",
-    "poster": "media/true_color__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 14.7,
-    "flash": 0.0
+    "mp4": "media/driving_ext_v6fix_1.mp4",
+    "poster": "media/driving_ext_v6fix_1.jpg",
+    "clip": "cs_frankfurt_000001_007266__drive_edit1",
+    "dSrc": 7.9,
+    "dInput": 9.9,
+    "dFixed": 8.5
    },
    {
-    "mp4": "media/true_color__vary_2.mp4",
-    "poster": "media/true_color__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 8.8,
-    "flash": 0.0
+    "mp4": "media/driving_ext_v6fix_2.mp4",
+    "poster": "media/driving_ext_v6fix_2.jpg",
+    "clip": "cs_frankfurt_000001_010425__drive_edit2",
+    "dSrc": 14.9,
+    "dInput": 16.6,
+    "dFixed": 15.7
    },
    {
-    "mp4": "media/true_color__vary_3.mp4",
-    "poster": "media/true_color__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 15.7,
-    "flash": 0.0
+    "mp4": "media/driving_ext_v6fix_3.mp4",
+    "poster": "media/driving_ext_v6fix_3.jpg",
+    "clip": "cs_frankfurt_000001_034797__drive_edit0",
+    "dSrc": 10.3,
+    "dInput": 23.6,
+    "dFixed": 20.5
    },
    {
-    "mp4": "media/true_color__vary_4.mp4",
-    "poster": "media/true_color__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 19.5,
-    "flash": 0.0
+    "mp4": "media/driving_ext_v6fix_4.mp4",
+    "poster": "media/driving_ext_v6fix_4.jpg",
+    "clip": "cs_frankfurt_000001_041055__drive_edit1",
+    "dSrc": 10.8,
+    "dInput": 12.9,
+    "dFixed": 11.2
    },
    {
-    "mp4": "media/true_color__vary_5.mp4",
-    "poster": "media/true_color__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 13.8,
-    "flash": 0.0
+    "mp4": "media/driving_ext_v6fix_5.mp4",
+    "poster": "media/driving_ext_v6fix_5.jpg",
+    "clip": "cs_frankfurt_000001_043545__drive_edit2",
+    "dSrc": 10.8,
+    "dInput": 12.0,
+    "dFixed": 11.1
    }
   ]
  },
  {
-  "recipe": "reproduce_view__vary",
-  "prompt": "reproduce this view",
-  "seed": "vary",
-  "flash": 0.0,
-  "incon": 11.0,
-  "bflick": 1.48,
+  "title": "Per-frame reconstruction \u2192 fixer",
+  "input_label": "INPUT: per-frame RECON",
   "demos": [
    {
     "mp4": "media/reproduce_view__vary_0.mp4",
     "poster": "media/reproduce_view__vary_0.jpg",
     "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.4,
-    "flash": 0.0
+    "dSrc": 6.4,
+    "dInput": 6.6,
+    "dFixed": 7.1
    },
    {
     "mp4": "media/reproduce_view__vary_1.mp4",
     "poster": "media/reproduce_view__vary_1.jpg",
     "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 16.1,
-    "flash": 0.0
+    "dSrc": 3.4,
+    "dInput": 10.2,
+    "dFixed": 3.9
    },
    {
     "mp4": "media/reproduce_view__vary_2.mp4",
     "poster": "media/reproduce_view__vary_2.jpg",
     "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 9.9,
-    "flash": 0.0
+    "dSrc": 3.7,
+    "dInput": 8.4,
+    "dFixed": 3.9
    },
    {
     "mp4": "media/reproduce_view__vary_3.mp4",
     "poster": "media/reproduce_view__vary_3.jpg",
     "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 11.0,
-    "flash": 0.0
+    "dSrc": 5.2,
+    "dInput": 9.8,
+    "dFixed": 5.7
    },
    {
     "mp4": "media/reproduce_view__vary_4.mp4",
     "poster": "media/reproduce_view__vary_4.jpg",
     "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 12.6,
-    "flash": 0.0
+    "dSrc": 8.6,
+    "dInput": 11.1,
+    "dFixed": 9.4
    },
    {
     "mp4": "media/reproduce_view__vary_5.mp4",
     "poster": "media/reproduce_view__vary_5.jpg",
     "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 9.2,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "photoreal_color__vary",
-  "prompt": "photorealistic reproduction, same colors/exposure",
-  "seed": "vary",
-  "flash": 0.0,
-  "incon": 10.4,
-  "bflick": 1.86,
-  "demos": [
-   {
-    "mp4": "media/photoreal_color__vary_0.mp4",
-    "poster": "media/photoreal_color__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 8.7,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/photoreal_color__vary_1.mp4",
-    "poster": "media/photoreal_color__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 13.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/photoreal_color__vary_2.mp4",
-    "poster": "media/photoreal_color__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 8.4,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/photoreal_color__vary_3.mp4",
-    "poster": "media/photoreal_color__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 9.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/photoreal_color__vary_4.mp4",
-    "poster": "media/photoreal_color__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 13.8,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/photoreal_color__vary_5.mp4",
-    "poster": "media/photoreal_color__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 9.1,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "reproduce_scene__vary",
-  "prompt": "reproduce this scene",
-  "seed": "vary",
-  "flash": 0.0,
-  "incon": 9.9,
-  "bflick": 1.16,
-  "demos": [
-   {
-    "mp4": "media/reproduce_scene__vary_0.mp4",
-    "poster": "media/reproduce_scene__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.6,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_scene__vary_1.mp4",
-    "poster": "media/reproduce_scene__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 13.6,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_scene__vary_2.mp4",
-    "poster": "media/reproduce_scene__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 9.0,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_scene__vary_3.mp4",
-    "poster": "media/reproduce_scene__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 9.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_scene__vary_4.mp4",
-    "poster": "media/reproduce_scene__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 11.1,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_scene__vary_5.mp4",
-    "poster": "media/reproduce_scene__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 8.7,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "rerender_scene__vary",
-  "prompt": "re-render this scene",
-  "seed": "vary",
-  "flash": 0.0,
-  "incon": 9.8,
-  "bflick": 1.42,
-  "demos": [
-   {
-    "mp4": "media/rerender_scene__vary_0.mp4",
-    "poster": "media/rerender_scene__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.7,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/rerender_scene__vary_1.mp4",
-    "poster": "media/rerender_scene__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 13.1,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/rerender_scene__vary_2.mp4",
-    "poster": "media/rerender_scene__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 8.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/rerender_scene__vary_3.mp4",
-    "poster": "media/rerender_scene__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 8.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/rerender_scene__vary_4.mp4",
-    "poster": "media/rerender_scene__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 12.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/rerender_scene__vary_5.mp4",
-    "poster": "media/rerender_scene__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 8.9,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "v6vague_mix__fix",
-  "prompt": "per-frame mix (6 vague prompts)",
-  "seed": "fix",
-  "flash": 0.0,
-  "incon": 9.7,
-  "bflick": 1.05,
-  "demos": [
-   {
-    "mp4": "media/v6vague_mix__fix_0.mp4",
-    "poster": "media/v6vague_mix__fix_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.4,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__fix_1.mp4",
-    "poster": "media/v6vague_mix__fix_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 12.4,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__fix_2.mp4",
-    "poster": "media/v6vague_mix__fix_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 8.9,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__fix_3.mp4",
-    "poster": "media/v6vague_mix__fix_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 9.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__fix_4.mp4",
-    "poster": "media/v6vague_mix__fix_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 11.6,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__fix_5.mp4",
-    "poster": "media/v6vague_mix__fix_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 8.9,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "reproduce_photo__vary",
-  "prompt": "reproduce this photo",
-  "seed": "vary",
-  "flash": 0.0,
-  "incon": 9.5,
-  "bflick": 1.06,
-  "demos": [
-   {
-    "mp4": "media/reproduce_photo__vary_0.mp4",
-    "poster": "media/reproduce_photo__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.4,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__vary_1.mp4",
-    "poster": "media/reproduce_photo__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 13.6,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__vary_2.mp4",
-    "poster": "media/reproduce_photo__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 8.4,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__vary_3.mp4",
-    "poster": "media/reproduce_photo__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 7.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__vary_4.mp4",
-    "poster": "media/reproduce_photo__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 11.6,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__vary_5.mp4",
-    "poster": "media/reproduce_photo__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 8.7,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "reproduce_image__vary",
-  "prompt": "reproduce this image",
-  "seed": "vary",
-  "flash": 0.0,
-  "incon": 9.4,
-  "bflick": 0.91,
-  "demos": [
-   {
-    "mp4": "media/reproduce_image__vary_0.mp4",
-    "poster": "media/reproduce_image__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.5,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_image__vary_1.mp4",
-    "poster": "media/reproduce_image__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 13.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_image__vary_2.mp4",
-    "poster": "media/reproduce_image__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 8.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_image__vary_3.mp4",
-    "poster": "media/reproduce_image__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 7.1,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_image__vary_4.mp4",
-    "poster": "media/reproduce_image__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 11.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_image__vary_5.mp4",
-    "poster": "media/reproduce_image__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 8.8,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "reproduce_view__fix",
-  "prompt": "reproduce this view",
-  "seed": "fix",
-  "flash": 0.0,
-  "incon": 8.2,
-  "bflick": 0.78,
-  "demos": [
-   {
-    "mp4": "media/reproduce_view__fix_0.mp4",
-    "poster": "media/reproduce_view__fix_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_view__fix_1.mp4",
-    "poster": "media/reproduce_view__fix_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 8.9,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_view__fix_2.mp4",
-    "poster": "media/reproduce_view__fix_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 5.5,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_view__fix_3.mp4",
-    "poster": "media/reproduce_view__fix_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 8.5,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_view__fix_4.mp4",
-    "poster": "media/reproduce_view__fix_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 10.7,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_view__fix_5.mp4",
-    "poster": "media/reproduce_view__fix_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 8.3,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "reproduce_photo__fix",
-  "prompt": "reproduce this photo",
-  "seed": "fix",
-  "flash": 0.0,
-  "incon": 7.9,
-  "bflick": 0.68,
-  "demos": [
-   {
-    "mp4": "media/reproduce_photo__fix_0.mp4",
-    "poster": "media/reproduce_photo__fix_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__fix_1.mp4",
-    "poster": "media/reproduce_photo__fix_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 8.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__fix_2.mp4",
-    "poster": "media/reproduce_photo__fix_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 5.3,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__fix_3.mp4",
-    "poster": "media/reproduce_photo__fix_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 7.1,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__fix_4.mp4",
-    "poster": "media/reproduce_photo__fix_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 11.1,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reproduce_photo__fix_5.mp4",
-    "poster": "media/reproduce_photo__fix_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 8.2,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "v6vague_mix__vary",
-  "prompt": "per-frame mix (6 vague prompts)",
-  "seed": "vary",
-  "flash": 0.5,
-  "incon": 10.8,
-  "bflick": 1.23,
-  "demos": [
-   {
-    "mp4": "media/v6vague_mix__vary_0.mp4",
-    "poster": "media/v6vague_mix__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.7,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__vary_1.mp4",
-    "poster": "media/v6vague_mix__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 15.9,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__vary_2.mp4",
-    "poster": "media/v6vague_mix__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 11.9,
-    "flash": 0.03
-   },
-   {
-    "mp4": "media/v6vague_mix__vary_3.mp4",
-    "poster": "media/v6vague_mix__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 7.9,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__vary_4.mp4",
-    "poster": "media/v6vague_mix__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 11.8,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/v6vague_mix__vary_5.mp4",
-    "poster": "media/v6vague_mix__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 9.5,
-    "flash": 0.0
-   }
-  ]
- },
- {
-  "recipe": "reconstruct_same__vary",
-  "prompt": "reconstruct the same image",
-  "seed": "vary",
-  "flash": 0.5,
-  "incon": 9.8,
-  "bflick": 1.3,
-  "demos": [
-   {
-    "mp4": "media/reconstruct_same__vary_0.mp4",
-    "poster": "media/reconstruct_same__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "incon": 7.6,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reconstruct_same__vary_1.mp4",
-    "poster": "media/reconstruct_same__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "incon": 12.7,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reconstruct_same__vary_2.mp4",
-    "poster": "media/reconstruct_same__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "incon": 10.3,
-    "flash": 0.03
-   },
-   {
-    "mp4": "media/reconstruct_same__vary_3.mp4",
-    "poster": "media/reconstruct_same__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "incon": 7.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reconstruct_same__vary_4.mp4",
-    "poster": "media/reconstruct_same__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "incon": 11.2,
-    "flash": 0.0
-   },
-   {
-    "mp4": "media/reconstruct_same__vary_5.mp4",
-    "poster": "media/reconstruct_same__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "incon": 9.7,
-    "flash": 0.0
+    "dSrc": 6.3,
+    "dInput": 7.5,
+    "dFixed": 6.6
    }
   ]
  }
