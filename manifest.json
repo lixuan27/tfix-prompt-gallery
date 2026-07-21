@@ -1,110 +1,68 @@
 [
  {
-  "title": "Same-frame editing \u2192 fixer (real per-frame driving edits)",
-  "input_label": "INPUT: per-frame EDIT",
-  "demos": [
-   {
-    "mp4": "media/driving_ext_v6fix_0.mp4",
-    "poster": "media/driving_ext_v6fix_0.jpg",
-    "clip": "cs_frankfurt_000001_004717__drive_edit0",
-    "dSrc": 7.6,
-    "dInput": 12.5,
-    "dFixed": 7.8
-   },
-   {
-    "mp4": "media/driving_ext_v6fix_1.mp4",
-    "poster": "media/driving_ext_v6fix_1.jpg",
-    "clip": "cs_frankfurt_000001_007266__drive_edit1",
-    "dSrc": 7.9,
-    "dInput": 9.9,
-    "dFixed": 8.5
-   },
-   {
-    "mp4": "media/driving_ext_v6fix_2.mp4",
-    "poster": "media/driving_ext_v6fix_2.jpg",
-    "clip": "cs_frankfurt_000001_010425__drive_edit2",
-    "dSrc": 14.9,
-    "dInput": 16.6,
-    "dFixed": 15.7
-   },
-   {
-    "mp4": "media/driving_ext_v6fix_3.mp4",
-    "poster": "media/driving_ext_v6fix_3.jpg",
-    "clip": "cs_frankfurt_000001_034797__drive_edit0",
-    "dSrc": 10.3,
-    "dInput": 23.6,
-    "dFixed": 20.5
-   },
-   {
-    "mp4": "media/driving_ext_v6fix_4.mp4",
-    "poster": "media/driving_ext_v6fix_4.jpg",
-    "clip": "cs_frankfurt_000001_041055__drive_edit1",
-    "dSrc": 10.8,
-    "dInput": 12.9,
-    "dFixed": 11.2
-   },
-   {
-    "mp4": "media/driving_ext_v6fix_5.mp4",
-    "poster": "media/driving_ext_v6fix_5.jpg",
-    "clip": "cs_frankfurt_000001_043545__drive_edit2",
-    "dSrc": 10.8,
-    "dInput": 12.0,
-    "dFixed": 11.1
-   }
-  ]
+  "mp4": "media/cs_frankfurt_000001_004717__drive_edit0.mp4",
+  "poster": "media/cs_frankfurt_000001_004717__drive_edit0.jpg",
+  "clip": "cs_frankfurt_000001_004717__drive_edit0",
+  "d": {
+   "SOURCE": 7.6,
+   "SAME-FRAME EDIT": 12.5,
+   "VACE v2v (off-the-shelf)": 10.6,
+   "OUR FIXER (trained)": 7.8
+  }
  },
  {
-  "title": "Per-frame reconstruction \u2192 fixer",
-  "input_label": "INPUT: per-frame RECON",
-  "demos": [
-   {
-    "mp4": "media/reproduce_view__vary_0.mp4",
-    "poster": "media/reproduce_view__vary_0.jpg",
-    "clip": "11f595c8b4e17c05f1adf4396c38f5f0__v6_vague3",
-    "dSrc": 6.4,
-    "dInput": 6.6,
-    "dFixed": 7.1
-   },
-   {
-    "mp4": "media/reproduce_view__vary_1.mp4",
-    "poster": "media/reproduce_view__vary_1.jpg",
-    "clip": "13826886_ahsan_fathoni__v6_vague0",
-    "dSrc": 3.4,
-    "dInput": 10.2,
-    "dFixed": 3.9
-   },
-   {
-    "mp4": "media/reproduce_view__vary_2.mp4",
-    "poster": "media/reproduce_view__vary_2.jpg",
-    "clip": "25786011_declan_conor__v6_vague3",
-    "dSrc": 3.7,
-    "dInput": 8.4,
-    "dFixed": 3.9
-   },
-   {
-    "mp4": "media/reproduce_view__vary_3.mp4",
-    "poster": "media/reproduce_view__vary_3.jpg",
-    "clip": "cs_aachen_000001_000000__v6_vague0",
-    "dSrc": 5.2,
-    "dInput": 9.8,
-    "dFixed": 5.7
-   },
-   {
-    "mp4": "media/reproduce_view__vary_4.mp4",
-    "poster": "media/reproduce_view__vary_4.jpg",
-    "clip": "cs_aachen_000004_000000__v6_vague0",
-    "dSrc": 8.6,
-    "dInput": 11.1,
-    "dFixed": 9.4
-   },
-   {
-    "mp4": "media/reproduce_view__vary_5.mp4",
-    "poster": "media/reproduce_view__vary_5.jpg",
-    "clip": "cs_darmstadt_000015_000000__v6_vague4",
-    "dSrc": 6.3,
-    "dInput": 7.5,
-    "dFixed": 6.6
-   }
-  ]
+  "mp4": "media/cs_frankfurt_000001_007266__drive_edit1.mp4",
+  "poster": "media/cs_frankfurt_000001_007266__drive_edit1.jpg",
+  "clip": "cs_frankfurt_000001_007266__drive_edit1",
+  "d": {
+   "SOURCE": 7.9,
+   "SAME-FRAME EDIT": 9.9,
+   "VACE v2v (off-the-shelf)": 17.1,
+   "OUR FIXER (trained)": 8.5
+  }
+ },
+ {
+  "mp4": "media/cs_frankfurt_000001_010425__drive_edit2.mp4",
+  "poster": "media/cs_frankfurt_000001_010425__drive_edit2.jpg",
+  "clip": "cs_frankfurt_000001_010425__drive_edit2",
+  "d": {
+   "SOURCE": 14.9,
+   "SAME-FRAME EDIT": 16.6,
+   "VACE v2v (off-the-shelf)": 12.8,
+   "OUR FIXER (trained)": 15.7
+  }
+ },
+ {
+  "mp4": "media/cs_frankfurt_000001_034797__drive_edit0.mp4",
+  "poster": "media/cs_frankfurt_000001_034797__drive_edit0.jpg",
+  "clip": "cs_frankfurt_000001_034797__drive_edit0",
+  "d": {
+   "SOURCE": 10.3,
+   "SAME-FRAME EDIT": 23.6,
+   "VACE v2v (off-the-shelf)": 22.3,
+   "OUR FIXER (trained)": 20.5
+  }
+ },
+ {
+  "mp4": "media/cs_frankfurt_000001_041055__drive_edit1.mp4",
+  "poster": "media/cs_frankfurt_000001_041055__drive_edit1.jpg",
+  "clip": "cs_frankfurt_000001_041055__drive_edit1",
+  "d": {
+   "SOURCE": 10.8,
+   "SAME-FRAME EDIT": 12.9,
+   "VACE v2v (off-the-shelf)": 25.2,
+   "OUR FIXER (trained)": 11.2
+  }
+ },
+ {
+  "mp4": "media/cs_frankfurt_000001_043545__drive_edit2.mp4",
+  "poster": "media/cs_frankfurt_000001_043545__drive_edit2.jpg",
+  "clip": "cs_frankfurt_000001_043545__drive_edit2",
+  "d": {
+   "SOURCE": 10.8,
+   "SAME-FRAME EDIT": 12.0,
+   "VACE v2v (off-the-shelf)": 10.6,
+   "OUR FIXER (trained)": 11.1
+  }
  }
 ]

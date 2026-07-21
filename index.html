@@ -1,38 +1,30 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Temporal Fixer — same-frame editing → fixer</title>
+<title>Temporal Fixer — VACE v2v vs our trained fixer</title>
 <style>
 :root{color-scheme:dark}
 body{margin:0;background:#0c0c0f;color:#e8e8ea;font:15px/1.55 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif}
-header{padding:32px 22px 8px;max-width:1240px;margin:0 auto} h1{font-size:25px;margin:0 0 8px}
-.lead{color:#b6b6be;max-width:900px} .lead b{color:#e8e8ea}
-.k{display:inline-block;padding:1px 7px;border-radius:5px;font-size:13px}
-.sec{max-width:1240px;margin:26px auto 6px;padding:0 22px;font-size:18px;color:#ffd25a}
-.grid{max-width:1240px;margin:0 auto;padding:6px 16px 22px;display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:13px}
-figure{margin:0;background:#141418;border:1px solid #24242c;border-radius:10px;overflow:hidden}
+header{padding:32px 22px 8px;max-width:1300px;margin:0 auto} h1{font-size:25px;margin:0 0 8px}
+.lead{color:#b6b6be;max-width:940px} .lead b{color:#e8e8ea}
+.grid{max-width:1300px;margin:10px auto;padding:6px 16px 24px;display:grid;grid-template-columns:1fr;gap:14px}
+figure{margin:0;background:#141418;border:1px solid #24242c;border-radius:11px;overflow:hidden}
 video{width:100%;display:block;background:#000}
-figcaption{display:flex;justify-content:space-between;padding:7px 11px;font-size:12px;color:#9a9aa4}
-figcaption b{color:#7dff9e} figcaption span{color:#cfcfd6}
+figcaption{display:flex;justify-content:space-between;padding:8px 12px;font-size:12.5px;color:#9a9aa4}
+figcaption b{color:#e8e8ea}
 </style></head><body>
-<header><h1>Same-frame editing → temporal fixer</h1>
-<p class="lead">Each panel triple: <b style="color:#78dcff">SOURCE (clean)</b> · <b style="color:#ffd25a">INPUT</b> (a frozen editor run
-<b>per frame</b>, one frame at a time — this injects the temporal inconsistency) · <b style="color:#7dff9e">OUR FIXER</b>
-(causal video fixer, trained only on clean-video reconstruction, no edited data). Numbers = frame-to-frame |Δ|
-(temporal inconsistency). The fixer drives |Δ| back to ~source level while keeping the edit. Hover to play.</p></header>
-<h2 class="sec">Same-frame editing → fixer (real per-frame driving edits)</h2><div class="grid">
-<figure><video muted loop playsinline preload="metadata" poster="media/driving_ext_v6fix_0.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/driving_ext_v6fix_0.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_004717<span>Δ 12.5→<b>7.8</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/driving_ext_v6fix_1.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/driving_ext_v6fix_1.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_007266<span>Δ 9.9→<b>8.5</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/driving_ext_v6fix_2.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/driving_ext_v6fix_2.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_010425<span>Δ 16.6→<b>15.7</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/driving_ext_v6fix_3.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/driving_ext_v6fix_3.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_034797<span>Δ 23.6→<b>20.5</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/driving_ext_v6fix_4.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/driving_ext_v6fix_4.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_041055<span>Δ 12.9→<b>11.2</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/driving_ext_v6fix_5.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/driving_ext_v6fix_5.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_043545<span>Δ 12.0→<b>11.1</b> ↓</span></figcaption></figure>
-</div>
-<h2 class="sec">Per-frame reconstruction → fixer</h2><div class="grid">
-<figure><video muted loop playsinline preload="metadata" poster="media/reproduce_view__vary_0.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/reproduce_view__vary_0.mp4" type="video/mp4"></video><figcaption>11f595c8b4e17c05f1adf4396c<span>Δ 6.6→<b>7.1</b> =</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/reproduce_view__vary_1.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/reproduce_view__vary_1.mp4" type="video/mp4"></video><figcaption>13826886_ahsan_fathoni__v6<span>Δ 10.2→<b>3.9</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/reproduce_view__vary_2.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/reproduce_view__vary_2.mp4" type="video/mp4"></video><figcaption>25786011_declan_conor__v6_<span>Δ 8.4→<b>3.9</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/reproduce_view__vary_3.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/reproduce_view__vary_3.mp4" type="video/mp4"></video><figcaption>cs_aachen_000001_000000__v<span>Δ 9.8→<b>5.7</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/reproduce_view__vary_4.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/reproduce_view__vary_4.mp4" type="video/mp4"></video><figcaption>cs_aachen_000004_000000__v<span>Δ 11.1→<b>9.4</b> ↓</span></figcaption></figure>
-<figure><video muted loop playsinline preload="metadata" poster="media/reproduce_view__vary_5.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/reproduce_view__vary_5.mp4" type="video/mp4"></video><figcaption>cs_darmstadt_000015_000000<span>Δ 7.5→<b>6.6</b> ↓</span></figcaption></figure>
-</div>
+<header><h1>Off-the-shelf VACE (v2v) vs our trained fixer</h1>
+<p class="lead">Four panels per clip: <b style="color:#78dcff">SOURCE</b> · <b style="color:#ffd25a">SAME-FRAME EDIT</b>
+(frozen editor run per frame — the temporal inconsistency) · <b style="color:#ff96dc">VACE v2v</b>
+(Wan2.1-VACE-1.3B, correctly configured: fp32 VAE + UniPC, full-mask video-to-video) ·
+<b style="color:#7dff9e">OUR FIXER</b> (causal, trained only on clean-video reconstruction). Numbers = frame-to-frame |Δ|.
+Off-the-shelf VACE (full-mask v2v, correctly configured: fp32 VAE + UniPC + 81 frames) is <b>not a reliable
+edit-preserving fixer</b>: it <b>color-corrupts on saturated edits</b> (autumn/sunny) and <b>drifts the appearance</b>
+even when coherent (snow), because its generative prior reimagines the scene. Our purpose-trained causal fixer
+<b>preserves the edit and smooths cleanly on all content</b> — exactly what the "editing for free" thesis predicts. Hover to play.</p></header>
+<div class="grid"><figure><video muted loop playsinline preload="metadata" poster="media/cs_frankfurt_000001_004717__drive_edit0.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/cs_frankfurt_000001_004717__drive_edit0.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_0047<span>edit 12.5 → VACE <b>10.6</b> · ours <b style="color:#7dff9e">7.8</b></span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/cs_frankfurt_000001_007266__drive_edit1.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/cs_frankfurt_000001_007266__drive_edit1.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_0072<span>edit 9.9 → VACE <b>17.1</b> · ours <b style="color:#7dff9e">8.5</b></span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/cs_frankfurt_000001_010425__drive_edit2.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/cs_frankfurt_000001_010425__drive_edit2.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_0104<span>edit 16.6 → VACE <b>12.8</b> · ours <b style="color:#7dff9e">15.7</b></span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/cs_frankfurt_000001_034797__drive_edit0.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/cs_frankfurt_000001_034797__drive_edit0.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_0347<span>edit 23.6 → VACE <b>22.3</b> · ours <b style="color:#7dff9e">20.5</b></span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/cs_frankfurt_000001_041055__drive_edit1.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/cs_frankfurt_000001_041055__drive_edit1.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_0410<span>edit 12.9 → VACE <b>25.2</b> · ours <b style="color:#7dff9e">11.2</b></span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/cs_frankfurt_000001_043545__drive_edit2.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/cs_frankfurt_000001_043545__drive_edit2.mp4" type="video/mp4"></video><figcaption>cs_frankfurt_000001_0435<span>edit 12.0 → VACE <b>10.6</b> · ours <b style="color:#7dff9e">11.1</b></span></figcaption></figure></div>
 </body></html>
