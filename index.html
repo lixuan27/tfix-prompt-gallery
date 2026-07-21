@@ -1,332 +1,57 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Temporal_Fixer — Reconstruction Prompt Gallery</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Temporal Fixer — Reconstruction (zoom-fixed)</title>
 <style>
-:root{--bg:#0e0e11;--card:#17171b;--fg:#e8e8ea;--mut:#9a9aa2;--acc:#ffd450;}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-header{padding:38px 24px 10px;max-width:1200px;margin:0 auto}
-h1{font-size:26px;margin:0 0 6px}
-.sub{color:var(--mut);max-width:820px}
-.sub code{color:var(--acc)}
-main{max-width:1200px;margin:0 auto;padding:0 24px 60px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid #24242a;border-radius:12px;padding:14px;overflow:hidden}
-.prompt{font-size:15px;font-weight:600;margin-bottom:8px;color:#fff;min-height:44px}
-.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:10px}
-.seed{font-size:12px;color:var(--mut);margin-right:4px}
-.chip{font-size:11px;background:#22222a;color:#cfcfd6;border-radius:20px;padding:2px 9px}
-.chip.corr{background:#2a2320;color:var(--acc)}
-.vids{display:grid;grid-template-columns:1fr;gap:8px}
-video{width:100%;border-radius:8px;display:block;background:#000}
-.editgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(560px,1fr));gap:14px;margin-bottom:10px}
-.edit{margin:0}
-.edit figcaption{color:var(--mut);font-size:12px;margin-top:4px}
-footer{max-width:1200px;margin:0 auto;padding:20px 24px 60px;color:var(--mut);font-size:13px}
-a{color:var(--acc)}
+:root{color-scheme:dark}
+body{margin:0;background:#0c0c0f;color:#e8e8ea;font:15px/1.55 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif}
+header{padding:34px 22px 10px;max-width:1180px;margin:0 auto}
+h1{font-size:26px;margin:0 0 8px}
+.lead{color:#b6b6be;max-width:820px}
+.note{background:#15243a;border:1px solid #24406a;border-radius:9px;padding:12px 15px;margin:16px 0;color:#cfe0f6;max-width:820px}
+.sec{max-width:1180px;margin:30px auto 6px;padding:0 22px;font-size:19px;color:#ffd25a}
+.grid{max-width:1180px;margin:0 auto;padding:6px 16px 26px;display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
+figure{margin:0;background:#141418;border:1px solid #24242c;border-radius:11px;overflow:hidden}
+video{width:100%;display:block;background:#000}
+figcaption{display:flex;justify-content:space-between;padding:8px 11px;font-size:12px;color:#9a9aa4}
+figcaption span{color:#ffd25a}
+footer{max-width:1180px;margin:0 auto;padding:10px 22px 40px;color:#6f6f78;font-size:13px}
 </style></head><body>
 <header>
-<h1>Temporal_Fixer — Reconstruction Prompt Gallery</h1>
-<p class="sub">Reconstruction under different prompts. In each clip: left = clean source,
-right = the frozen editor's per-frame reconstruction with that prompt. Editor =
-<code>Qwen-Image-Edit-2509 int4 + Lightning-v2 (nunchaku)</code>, 4-step, full denoising
-from Gaussian noise per frame — never tuned. Fresh noise per frame, so the reconstruction
-re-interprets each frame independently. <b>58</b> prompts, <b>232</b> reconstruction clips.</p>
+<h1>Temporal Fixer — per-frame reconstruction</h1>
+<p class="lead">Each clip shows <b style="color:#78dcff">SOURCE (clean video)</b> beside the <b style="color:#ffd25a">per-frame image-to-image RECONSTRUCTION</b>
+(frozen distilled Qwen-Image-Edit, one frame at a time, fresh noise per frame). The fixer is trained to undo the temporal
+inconsistency this injects, so editing comes for free at test time. Hover to play.</p>
+<div class="note"><b>Updated 2026-07-21 — zoom bug fixed.</b> Earlier reconstructions were a ~1.6× zoomed-in crop of the input
+(a resolution mismatch fed to the editor). These are regenerated at the editor's native matched resolution, so the
+reconstruction now keeps the source framing and shows the intended per-frame temporal inconsistency (not a zoom).</div>
 </header>
-<main>
-<div class="grid">
-<div class="card">
-  <div class="prompt">&ldquo;(empty prompt)&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_empty_0.jpg"><source src="media/pv_empty_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_empty_1.jpg"><source src="media/pv_empty_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_empty_2.jpg"><source src="media/pv_empty_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_empty_3.jpg"><source src="media/pv_empty_3.mp4" type="video/mp4"></video></div>
+<h2 class="sec">Driving (Cityscapes / ego)</h2><div class="grid">
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_0.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_0.mp4" type="video/mp4"></video><figcaption>cs_bremen_000092_000000__v6_vague2<span>temporal Δ 9.8</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_1.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_1.mp4" type="video/mp4"></video><figcaption>cs_darmstadt_000040_000000__v6_vag<span>temporal Δ 17.1</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_2.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_2.mp4" type="video/mp4"></video><figcaption>cs_bremen_000169_000000__v6_vague4<span>temporal Δ 9.4</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_3.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_3.mp4" type="video/mp4"></video><figcaption>cs_darmstadt_000042_000000__v6_vag<span>temporal Δ 8.6</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_4.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_4.mp4" type="video/mp4"></video><figcaption>cs_cologne_000048_000000__v6_vague<span>temporal Δ 12.1</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_5.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_5.mp4" type="video/mp4"></video><figcaption>cs_darmstadt_000011_000000__v6_vag<span>temporal Δ 12.3</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_6.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_6.mp4" type="video/mp4"></video><figcaption>cs_bochum_000000_031903__v6_vague3<span>temporal Δ 7.4</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_7.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_7.mp4" type="video/mp4"></video><figcaption>cs_cologne_000012_000000__v6_vague<span>temporal Δ 9.5</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_8.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_8.mp4" type="video/mp4"></video><figcaption>cs_darmstadt_000038_000000__v6_vag<span>temporal Δ 7.1</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_9.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_9.mp4" type="video/mp4"></video><figcaption>cs_darmstadt_000015_000000__v6_vag<span>temporal Δ 26.3</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_10.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_10.mp4" type="video/mp4"></video><figcaption>cs_cologne_000041_000000__v6_vague<span>temporal Δ 9.2</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_drvego_11.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_drvego_11.mp4" type="video/mp4"></video><figcaption>cs_darmstadt_000059_000000__v6_vag<span>temporal Δ 9.2</span></figcaption></figure>
 </div>
-<div class="card">
-  <div class="prompt">&ldquo;a crisp, well-exposed reproduction of the same scene&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_0.jpg"><source src="media/p6h_crisp_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_1.jpg"><source src="media/p6h_crisp_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_2.jpg"><source src="media/p6h_crisp_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6h_crisp_vary_3.jpg"><source src="media/p6h_crisp_vary_3.mp4" type="video/mp4"></video></div>
+<h2 class="sec">Diverse (nature / urban / people)</h2><div class="grid">
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_0.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_0.mp4" type="video/mp4"></video><figcaption>4554224_ketut_subiyanto__v6_vague5<span>temporal Δ 11.2</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_1.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_1.mp4" type="video/mp4"></video><figcaption>mixkit_clouds_mixkit-sunrise-and-m<span>temporal Δ 1.9</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_2.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_2.mp4" type="video/mp4"></video><figcaption>11f595c8b4e17c05f1adf4396c38f5f0__<span>temporal Δ 7.4</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_3.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_3.mp4" type="video/mp4"></video><figcaption>pixabay_cliffs_videos_128744_006__<span>temporal Δ 2.7</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_4.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_4.mp4" type="video/mp4"></video><figcaption>6107493_george_morina__v6_vague2<span>temporal Δ 7.6</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_5.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_5.mp4" type="video/mp4"></video><figcaption>2a74f2f6d8f3b6a7d52ad64a6cfa7a74__<span>temporal Δ 3.7</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_6.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_6.mp4" type="video/mp4"></video><figcaption>3056689_atakan_ozkan__v6_vague3<span>temporal Δ 8.8</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_7.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_7.mp4" type="video/mp4"></video><figcaption>pixabay_valleys_videos_72608_009__<span>temporal Δ 2.8</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_8.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_8.mp4" type="video/mp4"></video><figcaption>pixabay_cliffs_videos_172530_000__<span>temporal Δ 3.7</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_9.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_9.mp4" type="video/mp4"></video><figcaption>pixabay_Sea_Sunset_133954_006__v6_<span>temporal Δ 11.2</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_10.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_10.mp4" type="video/mp4"></video><figcaption>pixabay_cliffs_videos_118970_001__<span>temporal Δ 2.4</span></figcaption></figure>
+<figure><video muted loop playsinline preload="metadata" poster="media/recon_v6fix_other_11.jpg" onmouseover="this.play()" onmouseout="this.pause()"><source src="media/recon_v6fix_other_11.mp4" type="video/mp4"></video><figcaption>mixkit_clouds_mixkit-landscape-fro<span>temporal Δ 1.4</span></figcaption></figure>
 </div>
-<div class="card">
-  <div class="prompt">&ldquo;a photo of the same scene&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_photo_0.jpg"><source src="media/pv_photo_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_photo_1.jpg"><source src="media/pv_photo_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_photo_2.jpg"><source src="media/pv_photo_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_photo_3.jpg"><source src="media/pv_photo_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;a photorealistic reproduction of this scene, same colors and exposure&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_0.jpg"><source src="media/p6c_photoreal_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_1.jpg"><source src="media/p6c_photoreal_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_2.jpg"><source src="media/p6c_photoreal_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6c_photoreal_vary_3.jpg"><source src="media/p6c_photoreal_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;a slightly different rendition of the same scene, same style&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4d_rendition_vary_0.jpg"><source src="media/p4d_rendition_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4d_rendition_vary_1.jpg"><source src="media/p4d_rendition_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4d_rendition_vary_2.jpg"><source src="media/p4d_rendition_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4d_rendition_vary_3.jpg"><source src="media/p4d_rendition_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;a small variation of the same scene, same style&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5o_small_var_scene_vary_0.jpg"><source src="media/p5o_small_var_scene_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5o_small_var_scene_vary_1.jpg"><source src="media/p5o_small_var_scene_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5o_small_var_scene_vary_2.jpg"><source src="media/p5o_small_var_scene_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5o_small_var_scene_vary_3.jpg"><source src="media/p5o_small_var_scene_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;change the fine details slightly, keep the content and style the same&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4c_fine_details_vary_0.jpg"><source src="media/p4c_fine_details_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4c_fine_details_vary_1.jpg"><source src="media/p4c_fine_details_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4c_fine_details_vary_2.jpg"><source src="media/p4c_fine_details_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4c_fine_details_vary_3.jpg"><source src="media/p4c_fine_details_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;copy this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4j_copy_vary_0.jpg"><source src="media/p4j_copy_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4j_copy_vary_1.jpg"><source src="media/p4j_copy_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4j_copy_vary_2.jpg"><source src="media/p4j_copy_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4j_copy_vary_3.jpg"><source src="media/p4j_copy_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;depict the same scene&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5e_depict_vary_0.jpg"><source src="media/p5e_depict_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5e_depict_vary_1.jpg"><source src="media/p5e_depict_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5e_depict_vary_2.jpg"><source src="media/p5e_depict_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5e_depict_vary_3.jpg"><source src="media/p5e_depict_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;draw this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4h_draw_vary_0.jpg"><source src="media/p4h_draw_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4h_draw_vary_1.jpg"><source src="media/p4h_draw_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4h_draw_vary_2.jpg"><source src="media/p4h_draw_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4h_draw_vary_3.jpg"><source src="media/p4h_draw_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;generate the same image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5d_generate_same_vary_0.jpg"><source src="media/p5d_generate_same_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5d_generate_same_vary_1.jpg"><source src="media/p5d_generate_same_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5d_generate_same_vary_2.jpg"><source src="media/p5d_generate_same_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5d_generate_same_vary_3.jpg"><source src="media/p5d_generate_same_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;loosely reproduce this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5j_repro_loosely_vary_0.jpg"><source src="media/p5j_repro_loosely_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5j_repro_loosely_vary_1.jpg"><source src="media/p5j_repro_loosely_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5j_repro_loosely_vary_2.jpg"><source src="media/p5j_repro_loosely_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5j_repro_loosely_vary_3.jpg"><source src="media/p5j_repro_loosely_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;make small random changes to details, but keep the same style and layout&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4a_small_random_vary_0.jpg"><source src="media/p4a_small_random_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4a_small_random_vary_1.jpg"><source src="media/p4a_small_random_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4a_small_random_vary_2.jpg"><source src="media/p4a_small_random_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4a_small_random_vary_3.jpg"><source src="media/p4a_small_random_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;paint this image again&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5c_paint_again_vary_0.jpg"><source src="media/p5c_paint_again_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5c_paint_again_vary_1.jpg"><source src="media/p5c_paint_again_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5c_paint_again_vary_2.jpg"><source src="media/p5c_paint_again_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5c_paint_again_vary_3.jpg"><source src="media/p5c_paint_again_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;re-render this photo of a street&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_rerender_0.jpg"><source src="media/pv2_street_rerender_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_rerender_1.jpg"><source src="media/pv2_street_rerender_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_rerender_2.jpg"><source src="media/pv2_street_rerender_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_rerender_3.jpg"><source src="media/pv2_street_rerender_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;re-render this scene&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_rerender_0.jpg"><source src="media/pv_rerender_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_rerender_1.jpg"><source src="media/pv_rerender_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_rerender_2.jpg"><source src="media/pv_rerender_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_rerender_3.jpg"><source src="media/pv_rerender_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;re-render this scene with small variations, same style&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4o_rerender_small_var_vary_0.jpg"><source src="media/p4o_rerender_small_var_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4o_rerender_small_var_vary_1.jpg"><source src="media/p4o_rerender_small_var_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4o_rerender_small_var_vary_2.jpg"><source src="media/p4o_rerender_small_var_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4o_rerender_small_var_vary_3.jpg"><source src="media/p4o_rerender_small_var_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;re-render this street scene&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5g_rerender_street_vary_0.jpg"><source src="media/p5g_rerender_street_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5g_rerender_street_vary_1.jpg"><source src="media/p5g_rerender_street_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5g_rerender_street_vary_2.jpg"><source src="media/p5g_rerender_street_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5g_rerender_street_vary_3.jpg"><source src="media/p5g_rerender_street_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reconstruct the same image&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_recon_0.jpg"><source src="media/pv_recon_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_recon_1.jpg"><source src="media/pv_recon_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_recon_2.jpg"><source src="media/pv_recon_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_recon_3.jpg"><source src="media/pv_recon_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reconstruct this image, you can change it just a little bit but keep the same style&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_recon_fix_0.jpg"><source src="media/pm_little_recon_fix_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_recon_fix_1.jpg"><source src="media/pm_little_recon_fix_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_recon_fix_2.jpg"><source src="media/pm_little_recon_fix_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_recon_fix_3.jpg"><source src="media/pm_little_recon_fix_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;recreate this image&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_recreate_0.jpg"><source src="media/pv2_recreate_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_recreate_1.jpg"><source src="media/pv2_recreate_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_recreate_2.jpg"><source src="media/pv2_recreate_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_recreate_3.jpg"><source src="media/pv2_recreate_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;redo this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4f_redo_vary_0.jpg"><source src="media/p4f_redo_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4f_redo_vary_1.jpg"><source src="media/p4f_redo_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4f_redo_vary_2.jpg"><source src="media/p4f_redo_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4f_redo_vary_3.jpg"><source src="media/p4f_redo_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;redraw this image&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_redraw_0.jpg"><source src="media/pv_redraw_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_redraw_1.jpg"><source src="media/pv_redraw_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_redraw_2.jpg"><source src="media/pv_redraw_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_redraw_3.jpg"><source src="media/pv_redraw_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;redraw this image with slight variations, keeping the same style&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pm_slight_redraw_fix_0.jpg"><source src="media/pm_slight_redraw_fix_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_slight_redraw_fix_1.jpg"><source src="media/pm_slight_redraw_fix_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_slight_redraw_fix_2.jpg"><source src="media/pm_slight_redraw_fix_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_slight_redraw_fix_3.jpg"><source src="media/pm_slight_redraw_fix_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;regenerate this driving scene&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_drive_regen_0.jpg"><source src="media/pv2_drive_regen_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_drive_regen_1.jpg"><source src="media/pv2_drive_regen_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_drive_regen_2.jpg"><source src="media/pv2_drive_regen_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_drive_regen_3.jpg"><source src="media/pv2_drive_regen_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;regenerate this image&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_regen_0.jpg"><source src="media/pv_regen_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_regen_1.jpg"><source src="media/pv_regen_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_regen_2.jpg"><source src="media/pv_regen_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_regen_3.jpg"><source src="media/pv_regen_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reimagine this image only slightly&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4i_reimagine_slight_vary_0.jpg"><source src="media/p4i_reimagine_slight_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4i_reimagine_slight_vary_1.jpg"><source src="media/p4i_reimagine_slight_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4i_reimagine_slight_vary_2.jpg"><source src="media/p4i_reimagine_slight_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4i_reimagine_slight_vary_3.jpg"><source src="media/p4i_reimagine_slight_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;remake this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5b_remake_vary_0.jpg"><source src="media/p5b_remake_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5b_remake_vary_1.jpg"><source src="media/p5b_remake_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5b_remake_vary_2.jpg"><source src="media/p5b_remake_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5b_remake_vary_3.jpg"><source src="media/p5b_remake_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;render this image again&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4g_render_again_vary_0.jpg"><source src="media/p4g_render_again_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4g_render_again_vary_1.jpg"><source src="media/p4g_render_again_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4g_render_again_vary_2.jpg"><source src="media/p4g_render_again_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4g_render_again_vary_3.jpg"><source src="media/p4g_render_again_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;repaint this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4e_repaint_bare_vary_0.jpg"><source src="media/p4e_repaint_bare_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4e_repaint_bare_vary_1.jpg"><source src="media/p4e_repaint_bare_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4e_repaint_bare_vary_2.jpg"><source src="media/p4e_repaint_bare_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4e_repaint_bare_vary_3.jpg"><source src="media/p4e_repaint_bare_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;repaint this image, keeping everything the same&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repaint_0.jpg"><source src="media/pv_repaint_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repaint_1.jpg"><source src="media/pv_repaint_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repaint_2.jpg"><source src="media/pv_repaint_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repaint_3.jpg"><source src="media/pv_repaint_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;replicate this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5a_replicate_vary_0.jpg"><source src="media/p5a_replicate_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5a_replicate_vary_1.jpg"><source src="media/p5a_replicate_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5a_replicate_vary_2.jpg"><source src="media/p5a_replicate_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5a_replicate_vary_3.jpg"><source src="media/p5a_replicate_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;replicate this scene&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5f_replicate_scene_vary_0.jpg"><source src="media/p5f_replicate_scene_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5f_replicate_scene_vary_1.jpg"><source src="media/p5f_replicate_scene_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5f_replicate_scene_vary_2.jpg"><source src="media/p5f_replicate_scene_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5f_replicate_scene_vary_3.jpg"><source src="media/p5f_replicate_scene_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;replicate this scene in the same colors, lighting and sharpness&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_0.jpg"><source src="media/p6j_replicate_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_1.jpg"><source src="media/p6j_replicate_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_2.jpg"><source src="media/p6j_replicate_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6j_replicate_color_vary_3.jpg"><source src="media/p6j_replicate_color_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce every detail of this image&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4m_every_detail_vary_0.jpg"><source src="media/p4m_every_detail_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4m_every_detail_vary_1.jpg"><source src="media/p4m_every_detail_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4m_every_detail_vary_2.jpg"><source src="media/p4m_every_detail_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4m_every_detail_vary_3.jpg"><source src="media/p4m_every_detail_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repro_0.jpg"><source src="media/pv_repro_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repro_1.jpg"><source src="media/pv_repro_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repro_2.jpg"><source src="media/pv_repro_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_repro_3.jpg"><source src="media/pv_repro_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image faithfully&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5i_repro_faithfully_vary_0.jpg"><source src="media/p5i_repro_faithfully_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5i_repro_faithfully_vary_1.jpg"><source src="media/p5i_repro_faithfully_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5i_repro_faithfully_vary_2.jpg"><source src="media/p5i_repro_faithfully_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5i_repro_faithfully_vary_3.jpg"><source src="media/p5i_repro_faithfully_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image faithfully in high quality, preserve the colors and detail&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_0.jpg"><source src="media/p6d_hq_detail_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_1.jpg"><source src="media/p6d_hq_detail_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_2.jpg"><source src="media/p6d_hq_detail_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6d_hq_detail_vary_3.jpg"><source src="media/p6d_hq_detail_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image with minor variations in the details&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4b_minor_var_vary_0.jpg"><source src="media/p4b_minor_var_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4b_minor_var_vary_1.jpg"><source src="media/p4b_minor_var_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4b_minor_var_vary_2.jpg"><source src="media/p4b_minor_var_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4b_minor_var_vary_3.jpg"><source src="media/p4b_minor_var_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image, bright and detailed, true to the original colors&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_0.jpg"><source src="media/p6f_true_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_1.jpg"><source src="media/p6f_true_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_2.jpg"><source src="media/p6f_true_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6f_true_color_vary_3.jpg"><source src="media/p6f_true_color_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image, do not change the colors or brightness&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_0.jpg"><source src="media/p6g_no_recolor_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_1.jpg"><source src="media/p6g_no_recolor_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_2.jpg"><source src="media/p6g_no_recolor_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6g_no_recolor_vary_3.jpg"><source src="media/p6g_no_recolor_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image, keeping the exact same colors and brightness&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_0.jpg"><source src="media/p6a_repro_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_1.jpg"><source src="media/p6a_repro_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_2.jpg"><source src="media/p6a_repro_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6a_repro_color_vary_3.jpg"><source src="media/p6a_repro_color_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image, sharp and clear, in the same lighting&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_0.jpg"><source src="media/p6b_sharp_light_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_1.jpg"><source src="media/p6b_sharp_light_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_2.jpg"><source src="media/p6b_sharp_light_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6b_sharp_light_vary_3.jpg"><source src="media/p6b_sharp_light_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this image, you can change it just a little bit but keep the same style&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4n_repro_little_style_vary_0.jpg"><source src="media/p4n_repro_little_style_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4n_repro_little_style_vary_1.jpg"><source src="media/p4n_repro_little_style_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4n_repro_little_style_vary_2.jpg"><source src="media/p4n_repro_little_style_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4n_repro_little_style_vary_3.jpg"><source src="media/p4n_repro_little_style_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this photo&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_photo_repro_0.jpg"><source src="media/pv2_photo_repro_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_photo_repro_1.jpg"><source src="media/pv2_photo_repro_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_photo_repro_2.jpg"><source src="media/pv2_photo_repro_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_photo_repro_3.jpg"><source src="media/pv2_photo_repro_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this photo exactly&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4l_exact_control_vary_0.jpg"><source src="media/p4l_exact_control_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4l_exact_control_vary_1.jpg"><source src="media/p4l_exact_control_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4l_exact_control_vary_2.jpg"><source src="media/p4l_exact_control_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4l_exact_control_vary_3.jpg"><source src="media/p4l_exact_control_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this scene&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p4k_scene_repro_vary_0.jpg"><source src="media/p4k_scene_repro_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4k_scene_repro_vary_1.jpg"><source src="media/p4k_scene_repro_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4k_scene_repro_vary_2.jpg"><source src="media/p4k_scene_repro_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p4k_scene_repro_vary_3.jpg"><source src="media/p4k_scene_repro_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this scene, keeping the same style&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5n_keep_style_repro_vary_0.jpg"><source src="media/p5n_keep_style_repro_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5n_keep_style_repro_vary_1.jpg"><source src="media/p5n_keep_style_repro_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5n_keep_style_repro_vary_2.jpg"><source src="media/p5n_keep_style_repro_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5n_keep_style_repro_vary_3.jpg"><source src="media/p5n_keep_style_repro_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this street scene&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_repro_0.jpg"><source src="media/pv2_street_repro_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_repro_1.jpg"><source src="media/pv2_street_repro_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_repro_2.jpg"><source src="media/pv2_street_repro_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv2_street_repro_3.jpg"><source src="media/pv2_street_repro_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this view&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5h_reproduce_view_vary_0.jpg"><source src="media/p5h_reproduce_view_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5h_reproduce_view_vary_1.jpg"><source src="media/p5h_reproduce_view_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5h_reproduce_view_vary_2.jpg"><source src="media/p5h_reproduce_view_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5h_reproduce_view_vary_3.jpg"><source src="media/p5h_reproduce_view_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;reproduce this view, keep the original colors, brightness and sharpness&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_0.jpg"><source src="media/p6e_view_color_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_1.jpg"><source src="media/p6e_view_color_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_2.jpg"><source src="media/p6e_view_color_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6e_view_color_vary_3.jpg"><source src="media/p6e_view_color_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;restore this scene to a sharp, clear, true-color version&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_0.jpg"><source src="media/p6i_restore_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_1.jpg"><source src="media/p6i_restore_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_2.jpg"><source src="media/p6i_restore_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p6i_restore_vary_3.jpg"><source src="media/p6i_restore_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;roughly reproduce this scene&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5k_repro_roughly_vary_0.jpg"><source src="media/p5k_repro_roughly_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5k_repro_roughly_vary_1.jpg"><source src="media/p5k_repro_roughly_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5k_repro_roughly_vary_2.jpg"><source src="media/p5k_repro_roughly_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5k_repro_roughly_vary_3.jpg"><source src="media/p5k_repro_roughly_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;same image&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pv_same_0.jpg"><source src="media/pv_same_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_same_1.jpg"><source src="media/pv_same_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_same_2.jpg"><source src="media/pv_same_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pv_same_3.jpg"><source src="media/pv_same_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;slightly reinterpret this scene, keep the layout&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_0.jpg"><source src="media/p5p_reinterpret_slight_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_1.jpg"><source src="media/p5p_reinterpret_slight_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_2.jpg"><source src="media/p5p_reinterpret_slight_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5p_reinterpret_slight_vary_3.jpg"><source src="media/p5p_reinterpret_slight_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;the same scene&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5l_np_same_scene_vary_0.jpg"><source src="media/p5l_np_same_scene_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5l_np_same_scene_vary_1.jpg"><source src="media/p5l_np_same_scene_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5l_np_same_scene_vary_2.jpg"><source src="media/p5l_np_same_scene_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5l_np_same_scene_vary_3.jpg"><source src="media/p5l_np_same_scene_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;this photo&rdquo;</div>
-  <div class="meta"><span class="seed">vary (fresh noise / frame)</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/p5m_np_this_photo_vary_0.jpg"><source src="media/p5m_np_this_photo_vary_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5m_np_this_photo_vary_1.jpg"><source src="media/p5m_np_this_photo_vary_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5m_np_this_photo_vary_2.jpg"><source src="media/p5m_np_this_photo_vary_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/p5m_np_this_photo_vary_3.jpg"><source src="media/p5m_np_this_photo_vary_3.mp4" type="video/mp4"></video></div>
-</div>
-<div class="card">
-  <div class="prompt">&ldquo;you can change just a little bit but keep the same style&rdquo;</div>
-  <div class="meta"><span class="seed">fixed seed</span></div>
-  <div class="vids"><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_fix_0.jpg"><source src="media/pm_little_fix_0.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_fix_1.jpg"><source src="media/pm_little_fix_1.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_fix_2.jpg"><source src="media/pm_little_fix_2.mp4" type="video/mp4"></video><video muted loop autoplay playsinline preload="metadata" poster="media/pm_little_fix_3.jpg"><source src="media/pm_little_fix_3.mp4" type="video/mp4"></video></div>
-</div>
-</div>
-</main>
-<footer>Stanford &times; TRI · reconstruction-only self-supervision · no paired video-edit data.
-Data: Cityscapes (dashcam), EgoDex (ego), OpenVid/ditto1m (general).</footer>
+<footer>Reconstruction = frozen Qwen-Image-Edit-2509 (int4 + Lightning, 4-step), per-frame, vary-seed, vague prompts. No edited/paired data — the fixer only ever sees clean-video reconstruction at training time.</footer>
 </body></html>
