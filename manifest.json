@@ -1,68 +1,174 @@
-[
- {
-  "mp4": "media/cs_frankfurt_000001_004717__drive_edit0.mp4",
-  "poster": "media/cs_frankfurt_000001_004717__drive_edit0.jpg",
-  "clip": "cs_frankfurt_000001_004717__drive_edit0",
-  "d": {
-   "SOURCE": 7.6,
-   "SAME-FRAME EDIT": 12.5,
-   "VACE v2v (off-the-shelf)": 10.6,
-   "OUR FIXER (trained)": 7.8
+{
+ "sectionA": [
+  {
+   "mp4": "media/A_cs_lindau_000010_000000__drive_edit_wide0.mp4",
+   "poster": "media/A_cs_lindau_000010_000000__drive_edit_wide0.jpg",
+   "edit": "snow",
+   "dSrc": 3.5,
+   "dEdit": 11.2
+  },
+  {
+   "mp4": "media/A_cs_lindau_000016_000000__drive_edit_wide1.mp4",
+   "poster": "media/A_cs_lindau_000016_000000__drive_edit_wide1.jpg",
+   "edit": "autumn",
+   "dSrc": 6.0,
+   "dEdit": 8.3
+  },
+  {
+   "mp4": "media/A_cs_lindau_000020_000000__drive_edit_wide2.mp4",
+   "poster": "media/A_cs_lindau_000020_000000__drive_edit_wide2.jpg",
+   "edit": "sunny",
+   "dSrc": 11.0,
+   "dEdit": 29.1
+  },
+  {
+   "mp4": "media/A_cs_lindau_000030_000000__drive_edit_wide3.mp4",
+   "poster": "media/A_cs_lindau_000030_000000__drive_edit_wide3.jpg",
+   "edit": "rain",
+   "dSrc": 9.0,
+   "dEdit": 10.3
+  },
+  {
+   "mp4": "media/A_cs_lindau_000044_000000__drive_edit_wide4.mp4",
+   "poster": "media/A_cs_lindau_000044_000000__drive_edit_wide4.jpg",
+   "edit": "fog",
+   "dSrc": 9.9,
+   "dEdit": 8.2
+  },
+  {
+   "mp4": "media/A_cs_munster_000001_000000__drive_edit_wide5.mp4",
+   "poster": "media/A_cs_munster_000001_000000__drive_edit_wide5.jpg",
+   "edit": "night",
+   "dSrc": 4.4,
+   "dEdit": 9.8
+  },
+  {
+   "mp4": "media/A_cs_munster_000105_000000__drive_edit_wide7.mp4",
+   "poster": "media/A_cs_munster_000105_000000__drive_edit_wide7.jpg",
+   "edit": "anime",
+   "dSrc": 6.5,
+   "dEdit": 16.0
+  },
+  {
+   "mp4": "media/A_cs_munster_000168_000000__drive_edit_wide9.mp4",
+   "poster": "media/A_cs_munster_000168_000000__drive_edit_wide9.jpg",
+   "edit": "overcast",
+   "dSrc": 7.6,
+   "dEdit": 9.1
   }
- },
- {
-  "mp4": "media/cs_frankfurt_000001_007266__drive_edit1.mp4",
-  "poster": "media/cs_frankfurt_000001_007266__drive_edit1.jpg",
-  "clip": "cs_frankfurt_000001_007266__drive_edit1",
-  "d": {
-   "SOURCE": 7.9,
-   "SAME-FRAME EDIT": 9.9,
-   "VACE v2v (off-the-shelf)": 17.1,
-   "OUR FIXER (trained)": 8.5
+ ],
+ "sectionB": [
+  {
+   "mp4": "media/B_cs_lindau_000010_000000__drive_edit_wide0.mp4",
+   "poster": "media/B_cs_lindau_000010_000000__drive_edit_wide0.jpg",
+   "edit": "snow",
+   "dEdit": 10.9,
+   "dFixed": 5.5
+  },
+  {
+   "mp4": "media/B_cs_lindau_000016_000000__drive_edit_wide1.mp4",
+   "poster": "media/B_cs_lindau_000016_000000__drive_edit_wide1.jpg",
+   "edit": "autumn",
+   "dEdit": 7.8,
+   "dFixed": 5.4
+  },
+  {
+   "mp4": "media/B_cs_lindau_000020_000000__drive_edit_wide2.mp4",
+   "poster": "media/B_cs_lindau_000020_000000__drive_edit_wide2.jpg",
+   "edit": "sunny",
+   "dEdit": 28.7,
+   "dFixed": 25.5
+  },
+  {
+   "mp4": "media/B_cs_lindau_000030_000000__drive_edit_wide3.mp4",
+   "poster": "media/B_cs_lindau_000030_000000__drive_edit_wide3.jpg",
+   "edit": "rain",
+   "dEdit": 9.8,
+   "dFixed": 9.0
+  },
+  {
+   "mp4": "media/B_cs_lindau_000044_000000__drive_edit_wide4.mp4",
+   "poster": "media/B_cs_lindau_000044_000000__drive_edit_wide4.jpg",
+   "edit": "fog",
+   "dEdit": 8.2,
+   "dFixed": 8.9
+  },
+  {
+   "mp4": "media/B_cs_munster_000001_000000__drive_edit_wide5.mp4",
+   "poster": "media/B_cs_munster_000001_000000__drive_edit_wide5.jpg",
+   "edit": "night",
+   "dEdit": 9.7,
+   "dFixed": 4.6
+  },
+  {
+   "mp4": "media/B_cs_munster_000089_000000__drive_edit_wide6.mp4",
+   "poster": "media/B_cs_munster_000089_000000__drive_edit_wide6.jpg",
+   "edit": "night",
+   "dEdit": 16.0,
+   "dFixed": 6.8
+  },
+  {
+   "mp4": "media/B_cs_munster_000105_000000__drive_edit_wide7.mp4",
+   "poster": "media/B_cs_munster_000105_000000__drive_edit_wide7.jpg",
+   "edit": "anime",
+   "dEdit": 15.3,
+   "dFixed": 10.6
+  },
+  {
+   "mp4": "media/B_cs_munster_000144_000000__drive_edit_wide8.mp4",
+   "poster": "media/B_cs_munster_000144_000000__drive_edit_wide8.jpg",
+   "edit": "autumn",
+   "dEdit": 11.2,
+   "dFixed": 6.2
+  },
+  {
+   "mp4": "media/B_cs_munster_000168_000000__drive_edit_wide9.mp4",
+   "poster": "media/B_cs_munster_000168_000000__drive_edit_wide9.jpg",
+   "edit": "overcast",
+   "dEdit": 8.8,
+   "dFixed": 7.5
+  },
+  {
+   "mp4": "media/B_source__drive_edit_wide0.mp4",
+   "poster": "media/B_source__drive_edit_wide0.jpg",
+   "edit": "snow",
+   "dEdit": 10.4,
+   "dFixed": 4.9
+  },
+  {
+   "mp4": "media/B_source__drive_edit_wide1.mp4",
+   "poster": "media/B_source__drive_edit_wide1.jpg",
+   "edit": "autumn",
+   "dEdit": 8.6,
+   "dFixed": 2.6
+  },
+  {
+   "mp4": "media/B_source__drive_edit_wide10.mp4",
+   "poster": "media/B_source__drive_edit_wide10.jpg",
+   "edit": "bauhaus",
+   "dEdit": 17.0,
+   "dFixed": 12.2
+  },
+  {
+   "mp4": "media/B_source__drive_edit_wide11.mp4",
+   "poster": "media/B_source__drive_edit_wide11.jpg",
+   "edit": "golden hour",
+   "dEdit": 13.9,
+   "dFixed": 4.0
+  },
+  {
+   "mp4": "media/B_source__drive_edit_wide2.mp4",
+   "poster": "media/B_source__drive_edit_wide2.jpg",
+   "edit": "sunny",
+   "dEdit": 8.9,
+   "dFixed": 4.8
+  },
+  {
+   "mp4": "media/B_source__drive_edit_wide3.mp4",
+   "poster": "media/B_source__drive_edit_wide3.jpg",
+   "edit": "rain",
+   "dEdit": 10.3,
+   "dFixed": 2.8
   }
- },
- {
-  "mp4": "media/cs_frankfurt_000001_010425__drive_edit2.mp4",
-  "poster": "media/cs_frankfurt_000001_010425__drive_edit2.jpg",
-  "clip": "cs_frankfurt_000001_010425__drive_edit2",
-  "d": {
-   "SOURCE": 14.9,
-   "SAME-FRAME EDIT": 16.6,
-   "VACE v2v (off-the-shelf)": 12.8,
-   "OUR FIXER (trained)": 15.7
-  }
- },
- {
-  "mp4": "media/cs_frankfurt_000001_034797__drive_edit0.mp4",
-  "poster": "media/cs_frankfurt_000001_034797__drive_edit0.jpg",
-  "clip": "cs_frankfurt_000001_034797__drive_edit0",
-  "d": {
-   "SOURCE": 10.3,
-   "SAME-FRAME EDIT": 23.6,
-   "VACE v2v (off-the-shelf)": 22.3,
-   "OUR FIXER (trained)": 20.5
-  }
- },
- {
-  "mp4": "media/cs_frankfurt_000001_041055__drive_edit1.mp4",
-  "poster": "media/cs_frankfurt_000001_041055__drive_edit1.jpg",
-  "clip": "cs_frankfurt_000001_041055__drive_edit1",
-  "d": {
-   "SOURCE": 10.8,
-   "SAME-FRAME EDIT": 12.9,
-   "VACE v2v (off-the-shelf)": 25.2,
-   "OUR FIXER (trained)": 11.2
-  }
- },
- {
-  "mp4": "media/cs_frankfurt_000001_043545__drive_edit2.mp4",
-  "poster": "media/cs_frankfurt_000001_043545__drive_edit2.jpg",
-  "clip": "cs_frankfurt_000001_043545__drive_edit2",
-  "d": {
-   "SOURCE": 10.8,
-   "SAME-FRAME EDIT": 12.0,
-   "VACE v2v (off-the-shelf)": 10.6,
-   "OUR FIXER (trained)": 11.1
-  }
- }
-]
+ ]
+}
