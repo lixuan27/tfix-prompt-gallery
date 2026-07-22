@@ -5,56 +5,72 @@
    "poster": "media/A_cs_lindau_000010_000000__drive_edit_wide0.jpg",
    "edit": "snow",
    "dSrc": 3.5,
-   "dEdit": 16.6
+   "dEdit": 16.6,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/A_cs_lindau_000016_000000__drive_edit_wide1.mp4",
    "poster": "media/A_cs_lindau_000016_000000__drive_edit_wide1.jpg",
    "edit": "autumn",
    "dSrc": 6.0,
-   "dEdit": 10.5
+   "dEdit": 10.5,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/A_cs_lindau_000020_000000__drive_edit_wide2.mp4",
    "poster": "media/A_cs_lindau_000020_000000__drive_edit_wide2.jpg",
    "edit": "sunny",
    "dSrc": 11.0,
-   "dEdit": 44.3
+   "dEdit": 44.3,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/A_cs_lindau_000030_000000__drive_edit_wide3.mp4",
    "poster": "media/A_cs_lindau_000030_000000__drive_edit_wide3.jpg",
    "edit": "rain",
    "dSrc": 9.0,
-   "dEdit": 14.2
+   "dEdit": 14.2,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/A_cs_lindau_000044_000000__drive_edit_wide4.mp4",
    "poster": "media/A_cs_lindau_000044_000000__drive_edit_wide4.jpg",
    "edit": "fog",
    "dSrc": 9.9,
-   "dEdit": 10.7
+   "dEdit": 10.7,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/A_cs_munster_000001_000000__drive_edit_wide5.mp4",
    "poster": "media/A_cs_munster_000001_000000__drive_edit_wide5.jpg",
    "edit": "night",
    "dSrc": 4.4,
-   "dEdit": 12.9
+   "dEdit": 12.9,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/A_cs_munster_000105_000000__drive_edit_wide7.mp4",
    "poster": "media/A_cs_munster_000105_000000__drive_edit_wide7.jpg",
    "edit": "anime",
    "dSrc": 6.5,
-   "dEdit": 22.4
+   "dEdit": 22.4,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/A_cs_munster_000168_000000__drive_edit_wide9.mp4",
    "poster": "media/A_cs_munster_000168_000000__drive_edit_wide9.jpg",
    "edit": "overcast",
    "dSrc": 7.6,
-   "dEdit": 11.2
+   "dEdit": 11.2,
+   "fps": 17.0,
+   "frames": 33
   }
  ],
  "sectionB": [
@@ -63,112 +79,144 @@
    "poster": "media/B_cs_lindau_000010_000000__drive_edit_wide0.jpg",
    "edit": "snow",
    "dEdit": 16.1,
-   "dFixed": 7.2
+   "dFixed": 7.2,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_lindau_000016_000000__drive_edit_wide1.mp4",
    "poster": "media/B_cs_lindau_000016_000000__drive_edit_wide1.jpg",
    "edit": "autumn",
    "dEdit": 10.1,
-   "dFixed": 5.2
+   "dFixed": 5.2,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_lindau_000020_000000__drive_edit_wide2.mp4",
    "poster": "media/B_cs_lindau_000020_000000__drive_edit_wide2.jpg",
    "edit": "sunny",
    "dEdit": 43.6,
-   "dFixed": 41.0
+   "dFixed": 41.0,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_lindau_000030_000000__drive_edit_wide3.mp4",
    "poster": "media/B_cs_lindau_000030_000000__drive_edit_wide3.jpg",
    "edit": "rain",
    "dEdit": 13.5,
-   "dFixed": 10.5
+   "dFixed": 10.5,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_lindau_000044_000000__drive_edit_wide4.mp4",
    "poster": "media/B_cs_lindau_000044_000000__drive_edit_wide4.jpg",
    "edit": "fog",
    "dEdit": 10.6,
-   "dFixed": 9.9
+   "dFixed": 9.9,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_munster_000001_000000__drive_edit_wide5.mp4",
    "poster": "media/B_cs_munster_000001_000000__drive_edit_wide5.jpg",
    "edit": "night",
    "dEdit": 12.8,
-   "dFixed": 5.0
+   "dFixed": 5.0,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_munster_000089_000000__drive_edit_wide6.mp4",
    "poster": "media/B_cs_munster_000089_000000__drive_edit_wide6.jpg",
    "edit": "night",
    "dEdit": 25.5,
-   "dFixed": 8.5
+   "dFixed": 8.5,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_munster_000105_000000__drive_edit_wide7.mp4",
    "poster": "media/B_cs_munster_000105_000000__drive_edit_wide7.jpg",
    "edit": "anime",
    "dEdit": 21.5,
-   "dFixed": 12.2
+   "dFixed": 12.2,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_munster_000144_000000__drive_edit_wide8.mp4",
    "poster": "media/B_cs_munster_000144_000000__drive_edit_wide8.jpg",
    "edit": "autumn",
    "dEdit": 15.5,
-   "dFixed": 7.0
+   "dFixed": 7.0,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_cs_munster_000168_000000__drive_edit_wide9.mp4",
    "poster": "media/B_cs_munster_000168_000000__drive_edit_wide9.jpg",
    "edit": "overcast",
    "dEdit": 10.9,
-   "dFixed": 7.4
+   "dFixed": 7.4,
+   "fps": 17.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_source__drive_edit_wide0.mp4",
    "poster": "media/B_source__drive_edit_wide0.jpg",
    "edit": "snow",
    "dEdit": 16.5,
-   "dFixed": 5.8
+   "dFixed": 5.8,
+   "fps": 20.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_source__drive_edit_wide1.mp4",
    "poster": "media/B_source__drive_edit_wide1.jpg",
    "edit": "autumn",
    "dEdit": 11.3,
-   "dFixed": 2.7
+   "dFixed": 2.7,
+   "fps": 20.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_source__drive_edit_wide10.mp4",
    "poster": "media/B_source__drive_edit_wide10.jpg",
    "edit": "bauhaus",
    "dEdit": 30.3,
-   "dFixed": 19.6
+   "dFixed": 19.6,
+   "fps": 20.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_source__drive_edit_wide11.mp4",
    "poster": "media/B_source__drive_edit_wide11.jpg",
    "edit": "golden hour",
    "dEdit": 14.5,
-   "dFixed": 3.9
+   "dFixed": 3.9,
+   "fps": 20.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_source__drive_edit_wide2.mp4",
    "poster": "media/B_source__drive_edit_wide2.jpg",
    "edit": "sunny",
    "dEdit": 17.1,
-   "dFixed": 8.2
+   "dFixed": 8.2,
+   "fps": 20.0,
+   "frames": 33
   },
   {
    "mp4": "media/B_source__drive_edit_wide3.mp4",
    "poster": "media/B_source__drive_edit_wide3.jpg",
    "edit": "rain",
    "dEdit": 14.6,
-   "dFixed": 2.9
+   "dFixed": 2.9,
+   "fps": 20.0,
+   "frames": 33
   }
  ]
 }
